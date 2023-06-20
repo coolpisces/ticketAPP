@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+#ara {
+    width: 360px;
+    height: 50px;
+    background-color: rgb(237, 234, 234)
+}
+
+#search-top {
+    background-image: url(../images/search.svg);
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position-y: center;
+    background-position-x: 5px;
+}
+
+#search-top::placeholder {
+    padding-left: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-item:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    z-index: 5;
+}
+
+.card:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    z-index: 5;
+}
+
+#afis {
+    padding-top: 50px;
+}
+
+#kutucuklar .col-2 {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid rgb(207, 205, 205);
+}
+
+.koltuklar .col-1 {
+    width: 35px;
+    height: 35px;
+    margin: 3px;
+    border-radius: 8px;
+    border: 1px solid rgb(207, 205, 205);
+}
+
+.koltuklar .col-1:hover {
+    background-color: #efb507;
+
+}
+
+#bilet {
+    display: none;
+}
