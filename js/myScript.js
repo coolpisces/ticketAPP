@@ -22,7 +22,7 @@ function sinemaSecim() {
     /*
     let bilet = document.getElementById("bilet");
     let afis = document.getElementById("afis");
-    let film = document.getElementById(id).src.substr(22);
+    let film = document.getElementById(id).src.substr(22); 
 
     document.getElementById("bilet-img").src = film;
     document.getElementById("bilet-title").innerHTML = ad;
