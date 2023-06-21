@@ -345,12 +345,13 @@
                 <strong>Biletal'da etkinlikler bir tık uzağında!</strong> <br>
                 Şehrinizi seçip eğlenceye devam edin.
             </h6>
-            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="offcanvas"
+            <button id="sehirSec-buton" type="button" class="btn btn-outline-secondary" data-bs-dismiss="offcanvas"
                 aria-label="Close">Vazgeç</button>
         </div>
 
         <div class="offcanvas-body">
-            <select class="form-select" aria-label="Default select example" onchange="sehirSec()" id="sehirSelect">
+            <select class="form-select" aria-label="Default select example" onchange="sehirSec(); kapat();"
+                id="sehirSelect">
                 <option value="0">------</option>
                 <option>Adana</option>
                 <option>Adıyaman</option>
@@ -449,28 +450,7 @@
         </div>
     </div>
     <!--Search top offcanvas end-->
-    <script>
-        function sehirSec() {
-            let sehir = document.getElementById("sehirSelect");
-            let sehirButon = document.getElementById("sehirButon");
-            sehirButon.innerHTML = 'Seçili Şehir <br> <span class="fw-bold">' + sehir.value + '</span>';
-        }
-
-        function sinemaSecim(id, ad, tarih, saat) {
-            let bilet = document.getElementById("bilet");
-            let afis = document.getElementById("afis");
-            let film = document.getElementById(id).src.substr(22);
-
-            document.getElementById("bilet-img").src = film;
-            document.getElementById("bilet-title").innerHTML = ad;
-            document.getElementById("tarih").innerHTML = tarih;
-            document.getElementById("saat").innerHTML = saat;
-
-            afis.style.display = "none";
-            bilet.style.display = "flex";
-
-        }
-    </script>
+    <script src="js/myScript.js"></script>
 </body>
 
 </html>
