@@ -7,17 +7,31 @@ function sehirSec() {
 
 function sinemaSecim(id, ad, tarih, saat) {
     let bilet = document.getElementById("bilet");
+    let biletTitle = document.getElementById("bilet-title");
+    let afis = document.getElementById("afis");
+    let film = document.getElementById(id).src.substr(22);
+
+    let menulinks = document.getElementsByClassName("card");
+    Array.from(menulinks).forEach((menulink) => {
+        menulink.addEventListener("click", (e) => {
+
+            biletTitle.textContent = menulink.lastElementChild.children[0].textContent;
+        });
+    });
+
+    /*
+    let bilet = document.getElementById("bilet");
     let afis = document.getElementById("afis");
     let film = document.getElementById(id).src.substr(22);
 
     document.getElementById("bilet-img").src = film;
     document.getElementById("bilet-title").innerHTML = ad;
     document.getElementById("tarih").innerHTML = tarih;
-    document.getElementById("saat").innerHTML = saat;
+    document.getElementById("saat").innerHTML = saat; */
 
-    afis.style.display = "none";
+
     bilet.style.display = "flex";
-
+    afis.style.display = "none";
 }
 function kapat() {
     document.getElementById("sehirSec-buton").innerHTML = "Kapat";
