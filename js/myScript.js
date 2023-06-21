@@ -7,40 +7,40 @@ function sehirSec() {
 
 function sinemaSecim() {
     try {
+        if (document.getElementById("sehirButon").classList.contains("pasif")) {
+            alert("Öncelikle bulunduğunuz şehri seçin!")
+        } else {
+            document.getElementById("sinemaAdi").textContent = document.getElementById("sehirButon").textContent;
+            let bilet = document.getElementById("bilet");
+            let biletTitle = document.getElementById("bilet-title");
+            let afis = document.getElementById("afis");
 
-
-        let bilet = document.getElementById("bilet");
-        let biletTitle = document.getElementById("bilet-title");
-        let afis = document.getElementById("afis");
-
-        let menulinks = document.getElementsByClassName("card");
-        Array.from(menulinks).forEach((menulink) => {
-            menulink.addEventListener("click", () => {
-                document.getElementById("bilet-img").src = menulink.firstElementChild.getAttribute("src");
-                biletTitle.textContent = menulink.lastElementChild.children[0].textContent;
-                bilet.style.display = "flex";
-                afis.style.display = "none";
+            let menulinks = document.getElementsByClassName("card");
+            Array.from(menulinks).forEach((menulink) => {
+                menulink.addEventListener("click", () => {
+                    document.getElementById("bilet-img").src = menulink.firstElementChild.getAttribute("src");
+                    biletTitle.textContent = menulink.lastElementChild.children[0].textContent;
+                    bilet.style.display = "flex";
+                    afis.style.display = "none";
+                });
             });
-        });
+        }
+
+
     }
     catch (err) {
         throw err.textContent;
     }
-    /*
-    let bilet = document.getElementById("bilet");
-    let afis = document.getElementById("afis");
-    let film = document.getElementById(id).src.substr(22); 
-
-    document.getElementById("bilet-img").src = film;
-    document.getElementById("bilet-title").innerHTML = ad;
-    document.getElementById("tarih").innerHTML = tarih;
-    document.getElementById("saat").innerHTML = saat; */
-
-
 }
+
+
 function kapat() {
     document.getElementById("sehirSec-buton").innerHTML = "Kapat";
+    tutar = 0;
+    let div = document.querySelector('#sehirButon');
+    div.classList.remove('pasif');
 }
+
 function geriAl() {
     let bilet = document.getElementById("bilet");
     let afis = document.getElementById("afis");
@@ -48,15 +48,49 @@ function geriAl() {
     afis.style.display = "flex";
 }
 
-function biletSecimi() {
-    let tutar = 0;
-    const normal = 80;
-    const ogrenci = 60;
-    let koltuks = document.getElementsByClassName("col-1");
-    Array.from(koltuks).forEach((koltuk) => {
-        koltuk.addEventListener("click", () => {
-            koltuk.style.backgroundColor = "green";
-            tutar += normal;
-        });
-    });
+let toplam = 0;
+let tutar = document.getElementById('normalTutar');
+let secilenKoltuklar = document.querySelector('#secilenKoltuklar');
+const koltuklar = document.querySelector('.koltuklar');
+
+koltuklar.addEventListener('click', (e) => {
+    if (e.target.classList.contains('koltuk') && !e.target.classList.contains('dolu')) {
+        e.target.classList.toggle('secilen');
+
+        let seciliKoltukSayisi = koltuklar.querySelectorAll('.koltuk.secilen').length;
+        let total = seciliKoltukSayisi * 80;
+        document.getElementById('normalTutar').innerHTML = total.toString() + ",00 TL";
+        toplam = Number(total);
+
+    }
+
+});
+
+
+
+function secimiOnayla() {
+    if (toplam == 0)
+        alert("Önce bilet seçmelisiniz!"); else {
+        document.getElementById("sectiniz").innerHTML = "";
+        let sayi = document.getElementsByClassName('secilen').length;
+        for (let k = 0; k < sayi; k++) {
+            document.getElementById("sectiniz").innerHTML += document.getElementsByClassName('secilen')[k].textContent + " -";
+        }
+        document.getElementById("sat").style.visibility = "visible";
+
+
+
+    }
+
+}
+
+function sat() {
+
+    alert("Biletiniz onaylandı!");
+    document.getElementById("sectiniz").innerHTML = "";
+    document.getElementById("sat").style.visibility = "hidden";
+    document.getElementById("normalTutar").innerHTML = "00,00 TL";
+
+    document.querySelector(".sat").classList.replace("secilen", "dolu");
+
 }

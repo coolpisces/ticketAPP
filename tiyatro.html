@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Ticket Reservation</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-white shadow-lg p-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <div class="d-flex align-items-center fw-bolder">
+                    <i class="bi bi-film px-3 fs-2"></i>
+                    <small class="fs-2">BiletAL</small>
+                    <div class="d-flex mx-4" style="height:40px;">
+                        <div class="vr"></div>
+                    </div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <button id="sehirButon" class="btn bg-white shadow me-5 pasif" type="button"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+                            aria-controls="offcanvasScrolling">
+                            Bulunduğun Şehir</button>
+                    </li>
+                    <li class="nav-item ms-5">
+                        <a class="btn bg-white shadow  d-flex flex-column align-items-center" aria-current="page"
+                            href="sinema.html">
+                            <img src="images/cinema.png" class="img-fluid" width="35px" alt="">
+                            <span>Sinema</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a href="tiyatro.html" class="btn bg-white shadow active d-flex flex-column align-items-center">
+                            <img src="images/theatre.png" class="img-fluid" width="35px" alt="">
+                            <span>Tiyatro</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a href="muzik.html" class="btn bg-white shadow d-flex flex-column align-items-center">
+                            <img src="images/music.png" class="img-fluid" width="35px" alt="">
+                            <span>Müzik</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a href="spor.html" class="btn bg-white shadow d-flex flex-column align-items-center">
+                            <img src="images/spor.png" class="img-fluid" width="35px" alt="">
+                            <span>Spor</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a href="diger.html" class="btn bg-white shadow d-flex flex-column align-items-center">
+                            <img src="images/dot.png" class="img-fluid" width="35px" alt="">
+                            <span>Diğer</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ms-5">
+                        <a class="btn bg-white d-flex flex-column align-items-center">
+                            <img src="images/bakanlik.png" class="img-fluid" width="35px" alt="">
+                            <span>T.C. Kültür ve Turizm Bakanlığı</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="d-flex flex-column justify-content-end align-items-end me-3">
+                    <small class="fs-6 text-black-50">Şehrini Keşfet</small>
+                    <span><a href="#" class="text-info">#Şehrine Özel Etkinlikler</a></span>
+                </div>
+                <form class="d-flex" role="search">
+                    <input id="search-top" class="form-control shadow me-2" type="search" placeholder="Search"
+                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"
+                        aria-label="Search">
+                    <img src="images/bayrak.png" class="img-thumbnail shadow" width="50px" alt="">
+
+                    <i class="bi bi-person-circle fs-2 ms-3"></i>
+
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div id="afis" class="col-6 m-auto">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card h-100" onclick="sinemaSecim()">
+                            <img id="afis1" src="images/tiyatro/dansoz-202111410650.jpg" class="card-img-top"
+                                alt="dansöz">
+                            <div class="card-body">
+                                <h5 class="card-title">Dansöz</h5>
+                                <p class="card-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100" onclick="sinemaSecim()">
+                            <img id="afis2" src="images/tiyatro/eksi-bir-202282094356.jpg" class="card-img-top"
+                                alt="eksi bir">
+                            <div class="card-body">
+                                <h5 class="card-title">Eksi Bir</h5>
+                                <p class="card-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100" onclick="sinemaSecim()">
+                            <img id="afis3" src="images/tiyatro/etik-alkol-20216117461.jpg" class="card-img-top"
+                                alt="etik alkol">
+                            <div class="card-body">
+                                <h5 class="card-title">Etik Alkol</h5>
+                                <p class="card-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100" onclick="sinemaSecim()">
+                            <img id="afis4" src="images/tiyatro/golge-ustasi-2022222154235.jpg" class="card-img-top"
+                                alt="golge ustasi">
+                            <div class="card-body">
+                                <h5 class="card-title">Gölge Ustası</h5>
+                                <p class="card-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100" onclick="sinemaSecim()">
+                            <img id="afis5" src="images/tiyatro/iki-bekar-202191010437.png" class="card-img-top"
+                                alt="iki bekar">
+                            <div class="card-body">
+                                <h5 class="card-title">İki Bekar</h5>
+                                <p class="card-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100" onclick="sinemaSecim()">
+                            <img id="afis6" src="images/tiyatro/piraye-2021910134333.jpg" class="card-img-top"
+                                alt="piraye">
+                            <div class="card-body">
+                                <h5 class="card-title">Piraye</h5>
+                                <p class="card-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100" onclick="sinemaSecim()">
+                            <img id="afis7" src="images/tiyatro/son-20232215221.jpg" class="card-img-top" alt="son">
+                            <div class="card-body">
+                                <h5 class="card-title">Son</h5>
+                                <p class="card-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100" onclick="sinemaSecim()">
+                            <img id="afis8" src="images/tiyatro/taxim-2022211164523.jpg" class="card-img-top"
+                                alt="taxim">
+                            <div class="card-body">
+                                <h5 class="card-title">Taxim</h5>
+                                <p class="card-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="bilet" class="shadow rounded-4">
+                <div class="container shadow p-4 mt-1">
+                    <div class="row  justify-content-center align-items-center g-2 my-2">
+                        <div class="row justify-content-end align-items-end g-2">
+                            <button class="btn btn-close shadow rounded" onclick="geriAl()"></button>
+                        </div>
+                        <div class="row shadow rounded-4 justify-content-center align-items-center g-2">
+                            <div class="col-4 d-flex align-items-center">
+                                <img id="bilet-img" src="images/cinema-film/adalet.jpg" class="img-fluid" width="100px"
+                                    alt="adalet">
+                                <div class="m-3">
+                                    <span class="h4"><strong id="bilet-title">Adalet</strong></span><br>
+                                    <span id="sinemaAdi"><i class="bi bi-geo-alt-fill"></i>Sinema Adı</span><br>
+                                    <span><small><i class="bi bi-clock me-2"></i></small>
+                                        <span id="tarih">22 Haziran 2023</span>,
+                                        <strong id="saat">19:30</strong></span>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div id="kutucuklar" class="d-flex justify-content-start">
+                                    <div class="col-2 mx-2 bg-dark-subtle"> </div><span class="me-3">Dolu</span>
+                                    <div class="col-2 mx-2 bg-light-subtle"></div><span class="me-3">Boş</span>
+                                    <div class="col-2 mx-2 bg-warning"> </div><span class="me-3">Seçilen</span>
+                                </div>
+                            </div>
+                            <div class="col-4 d-flex justify-content-center mt-5 align-items-center">
+                                <div class="col-10">
+                                    <div class="shadow-lg p-3 rounded-3">
+                                        <p class=" d-flex justify-content-between text-black-50">
+                                            BİLET FİYATLARI
+                                            <i class="bi bi-arrow-down-circle"></i>
+                                        </p>
+                                        <p class="d-flex">
+                                            <span class="d-flex flex-column align-items-center mx-3">
+                                                <strong id="normalTutar">00,00 TL</strong>
+                                                <small>Normal</small>
+                                            </span>
+
+                                        </p>
+                                        <button class="btn btn-info d-flex justify-content-end"
+                                            onclick="secimiOnayla()">Seçimi
+                                            Onayla</button>
+                                        <button id="sat" class="btn btn-success d-flex justify-content-end"
+                                            onclick="sat()">Satın
+                                            Al</button>
+
+                                    </div>
+                                    <div id="secilenKoltuklar"
+                                        class="bg-body-secondary shadow p-4 rounded-bottom-3 mb-5">
+                                        KOLTUK SEÇİMİNİZ => <span id="sectiniz"></span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="koltuklar row bg-white shadow rounded-4 justify-content-center align-items-center g-2">
+                            <div class=" row justify-content-center align-items-center g-2">
+                                <div class="col-5 d-flex justify-content-evenly align-items-center text-center">
+                                    <div class="koltuk col-1">G1</div>
+                                    <div class="koltuk col-1">G2</div>
+                                    <div class="koltuk col-1">G3</div>
+                                    <div class="koltuk col-1">G4</div>
+                                    <div class="koltuk col-1">G5</div>
+                                    <div class="koltuk col-1">G6</div>
+                                    <div class="koltuk col-1">G7</div>
+                                    <div class="koltuk col-1">G8</div>
+                                    <div class="koltuk col-1">G9</div>
+                                    <div class="koltuk col-1">G10</div>
+                                    <div class="koltuk col-1">G11</div>
+                                    <div class="koltuk col-1">G12</div>
+                                </div>
+                            </div>
+                            <div class=" row justify-content-center align-items-center g-2">
+                                <div class="col-5 d-flex justify-content-evenly align-items-center text-center">
+                                    <div class="col d-flex">
+                                        <div class="koltuk col-1">F1</div>
+                                        <div class="koltuk col-1">F2</div>
+                                    </div>
+                                    <div class="col d-flex">
+                                        <div class="koltuk col-1">F3</div>
+                                        <div class="koltuk col-1">F4</div>
+                                        <div class="koltuk col-1">F5</div>
+                                        <div class="koltuk col-1">F6</div>
+                                        <div class="koltuk col-1">F7</div>
+                                        <div class="koltuk col-1">F8</div>
+                                        <div class="koltuk col-1">F9</div>
+                                        <div class="koltuk col-1">F10</div>
+                                        <div class="koltuk col-1">F11</div>
+                                        <div class="koltuk col-1">F12</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" row justify-content-center align-items-center g-2">
+                                <div class="col-5 d-flex justify-content-evenly align-items-center text-center">
+                                    <div class="col d-flex">
+                                        <div class="koltuk col-1">E1</div>
+                                        <div class="koltuk col-1">E2</div>
+                                    </div>
+                                    <div class="col d-flex">
+                                        <div class="koltuk col-1">E3</div>
+                                        <div class="koltuk col-1">E4</div>
+                                        <div class="koltuk col-1">E5</div>
+                                        <div class="koltuk col-1">E6</div>
+                                        <div class="koltuk dolu col-1">E7</div>
+                                        <div class="koltuk dolu col-1">E8</div>
+                                        <div class="koltuk col-1">E9</div>
+                                        <div class="koltuk col-1">E10</div>
+                                        <div class="koltuk col-1">E11</div>
+                                        <div class="koltuk dolu col-1">E12</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" row justify-content-center align-items-center g-2">
+                                <div class="col-5 d-flex justify-content-evenly align-items-center text-center">
+                                    <div class="col d-flex">
+                                        <div class="koltuk col-1">D1</div>
+                                        <div class="koltuk col-1">D2</div>
+                                    </div>
+                                    <div class="col d-flex">
+                                        <div class="koltuk col-1">D3</div>
+                                        <div class="koltuk col-1">D4</div>
+                                        <div class="koltuk col-1">D5</div>
+                                        <div class="koltuk col-1">D6</div>
+                                        <div class="koltuk col-1">D7</div>
+                                        <div class="koltuk col-1">D8</div>
+                                        <div class="koltuk col-1">D9</div>
+                                        <div class="koltuk col-1">D10</div>
+                                        <div class="koltuk col-1">D11</div>
+                                        <div class="koltuk col-1">D12</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" row justify-content-center align-items-center g-2">
+                                <div class="col-5 d-flex justify-content-center align-items-center text-center me-5">
+                                    <div class="koltuk dolu col-1">C1</div>
+                                    <div class="koltuk col-1">C2</div>
+                                    <div class="koltuk col-1">C3</div>
+                                    <div class="koltuk dolu col-1">C4</div>
+                                    <div class="koltuk col-1">C5</div>
+                                    <div class="koltuk col-1">C6</div>
+                                </div>
+                            </div>
+                            <div class=" row justify-content-center align-items-center g-2">
+                                <div class="col-5 d-flex justify-content-center align-items-center text-center me-5">
+                                    <div class="koltuk col-1">B1</div>
+                                    <div class="koltuk col-1">B2</div>
+                                    <div class="koltuk dolu col-1">B3</div>
+                                    <div class="koltuk dolu col-1">B4</div>
+                                    <div class="koltuk col-1">B5</div>
+                                    <div class="koltuk col-1">B6</div>
+                                </div>
+                            </div>
+                            <div class=" row justify-content-center align-items-center g-2">
+                                <div class="col-5 d-flex justify-content-center align-items-center text-center me-5">
+                                    <div class="koltuk col-1">A1</div>
+                                    <div class="koltuk col-1">A2</div>
+                                    <div class="koltuk col-1">A3</div>
+                                    <div class="koltuk col-1">A4</div>
+                                    <div class="koltuk col-1">A5</div>
+                                    <div class="koltuk col-1">A6</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="row bg-body-tertiary shadow rounded-4 p-4 justify-content-center align-items-center g-2 my-5">
+                        <div class="col text-center fs-4 fw-bolder">PERDE</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Şehir Seç offcanvas start-->
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+        id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+            <h6 class="offcanvas-title" id="offcanvasScrollingLabel">
+                <strong>Biletal'da etkinlikler bir tık uzağında!</strong> <br>
+                Şehrinizi seçip eğlenceye devam edin.
+            </h6>
+            <button id="sehirSec-buton" type="button" class="btn btn-outline-secondary" data-bs-dismiss="offcanvas"
+                aria-label="Close">Vazgeç</button>
+        </div>
+
+        <div class="offcanvas-body">
+            <select class="form-select" aria-label="Default select example" onchange="sehirSec(); kapat();"
+                id="sehirSelect">
+                <option value="0">------</option>
+                <option>Adana</option>
+                <option>Adıyaman</option>
+                <option>Afyonkarahisar</option>
+                <option>Ağrı</option>
+                <option>Amasya</option>
+                <option>Ankara</option>
+                <option>Antalya</option>
+                <option>Artvin</option>
+                <option>Aydın</option>
+                <option>Balıkesir</option>
+                <option>Bilecik</option>
+                <option>Bingöl</option>
+                <option>Bitlis</option>
+                <option>Bolu</option>
+                <option>Burdur</option>
+                <option>Bursa</option>
+                <option>Çanakkale</option>
+                <option>Çankırı</option>
+                <option>Çorum</option>
+                <option>Denizli</option>
+                <option>Diyarbakır</option>
+                <option>Edirne</option>
+                <option>Elazığ</option>
+                <option>Erzincan</option>
+                <option>Erzurum</option>
+                <option>Eskişehir</option>
+                <option>Gaziantep</option>
+                <option>Giresun</option>
+                <option>Gümüşhane</option>
+                <option>Hakkâri</option>
+                <option>Hatay</option>
+                <option>Isparta</option>
+                <option>Mersin</option>
+                <option>İstanbul</option>
+                <option>İzmir</option>
+                <option>Kars</option>
+                <option>Kastamonu</option>
+                <option>Kayseri</option>
+                <option>Kırklareli</option>
+                <option>Kırşehir</option>
+                <option>Kocaeli</option>
+                <option>Konya</option>
+                <option>Kütahya</option>
+                <option>Malatya</option>
+                <option>Manisa</option>
+                <option>Kahramanmaraş</option>
+                <option>Mardin</option>
+                <option>Muğla</option>
+                <option>Muş</option>
+                <option>Nevşehir</option>
+                <option>Niğde</option>
+                <option>Ordu</option>
+                <option>Rize</option>
+                <option>Sakarya</option>
+                <option>Samsun</option>
+                <option>Siirt</option>
+                <option>Sinop</option>
+                <option>Sivas</option>
+                <option>Tekirdağ</option>
+                <option>Tokat</option>
+                <option>Trabzon</option>
+                <option>Tunceli</option>
+                <option>Şanlıurfa</option>
+                <option>Uşak</option>
+                <option>Van</option>
+                <option>Yozgat</option>
+                <option>Zonguldak</option>
+                <option>Aksaray</option>
+                <option>Bayburt</option>
+                <option>Karaman</option>
+                <option>Kırıkkale</option>
+                <option>Batman</option>
+                <option>Şırnak</option>
+                <option>Bartın</option>
+                <option>Ardahan</option>
+                <option>Iğdır</option>
+                <option>Yalova</option>
+                <option>Karabük</option>
+                <option>Kilis</option>
+                <option>Osmaniye</option>
+                <option>Düzce</option>
+            </select>
+        </div>
+    </div>
+    <!--Şehir Seç offcanvas end-->
+
+    <!--Search top offcanvas start-->
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasTopLabel">Offcanvas top</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            ...
+        </div>
+    </div>
+    <!--Search top offcanvas end-->
+    <script src="js/myScript.js"></script>
+</body>
+
+</html>
