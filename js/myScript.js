@@ -98,7 +98,7 @@ function sat() {
 
     let secilenSayisi = document.getElementsByClassName("secilen").length;
     for (let i = 0; i < secilenSayisi; i++) {
-        document.getElementsByClassName("secilen")[i].style.background = "gray";
+        document.getElementsByClassName("secilen")[i].style.background = "rgb(207, 205, 205)";
     }
 }
 function detayToBilet() {

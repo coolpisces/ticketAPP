@@ -68,7 +68,7 @@ a {
 }
 
 .koltuk.dolu {
-    background-color: gray;
+    background-color: rgb(207, 205, 205);
 }
 
 .koltuk.dolu:hover {
@@ -76,7 +76,7 @@ a {
 }
 
 .koltuk.secilen {
-    background-color: green;
+    background-color: #ffc107;
 }
 
 #sat {
