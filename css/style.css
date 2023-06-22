@@ -86,3 +86,20 @@ a {
 .koltuk:hover {
     cursor: pointer;
 }
+
+.detayBg {
+    background-image: url(../images/film-detail-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
+#filmDetay {
+    display: none;
+}
+
+.detayBg button {
+    width: 338px;
+    margin-top: 200px;
+    background-color: #f8e71c;
+}

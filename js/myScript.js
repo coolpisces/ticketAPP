@@ -13,14 +13,17 @@ function sinemaSecim() {
             document.getElementById("sinemaAdi").textContent = document.getElementById("sehirButon").textContent;
             let bilet = document.getElementById("bilet");
             let biletTitle = document.getElementById("bilet-title");
+            let biletTitle2 = document.getElementById("bilet-title2");
             let afis = document.getElementById("afis");
 
             let menulinks = document.getElementsByClassName("card");
             Array.from(menulinks).forEach((menulink) => {
                 menulink.addEventListener("click", () => {
                     document.getElementById("bilet-img").src = menulink.firstElementChild.getAttribute("src");
+                    document.getElementById("bilet-img2").src = menulink.firstElementChild.getAttribute("src");
                     biletTitle.textContent = menulink.lastElementChild.children[0].textContent;
-                    bilet.style.display = "flex";
+                    biletTitle2.textContent = menulink.lastElementChild.children[0].textContent;
+                    filmDetay.style.display = "inline";
                     afis.style.display = "none";
                 });
             });
@@ -86,11 +89,20 @@ function secimiOnayla() {
 
 function sat() {
 
-    alert("Biletiniz onaylandı!");
+
+    let secilenKoltuklar = document.getElementById("sectiniz").textContent;
     document.getElementById("sectiniz").innerHTML = "";
     document.getElementById("sat").style.visibility = "hidden";
     document.getElementById("normalTutar").innerHTML = "00,00 TL";
+    alert(secilenKoltuklar + " koltuk numaralı" + tutar + "tutarındaki biletinizin/biletlerinizin ödemesi başarıyla gerçekleşmiştir!");
 
-    document.querySelector(".sat").classList.replace("secilen", "dolu");
+    let secilenSayisi = document.getElementsByClassName("secilen").length;
+    for (let i = 0; i < secilenSayisi; i++) {
+        document.getElementsByClassName("secilen")[i].style.background = "gray";
+    }
+}
+function detayToBilet() {
 
+    filmDetay.style.display = "none";
+    bilet.style.display = "flex";
 }
