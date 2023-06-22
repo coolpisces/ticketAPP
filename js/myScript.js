@@ -50,7 +50,7 @@ function geriAl() {
     bilet.style.display = "none";
     afis.style.display = "flex";
 }
-
+let seciliKoltukSayisi = 0;
 let toplam = 0;
 let tutar = document.getElementById('normalTutar');
 let secilenKoltuklar = document.querySelector('#secilenKoltuklar');
@@ -60,7 +60,7 @@ koltuklar.addEventListener('click', (e) => {
     if (e.target.classList.contains('koltuk') && !e.target.classList.contains('dolu')) {
         e.target.classList.toggle('secilen');
 
-        let seciliKoltukSayisi = koltuklar.querySelectorAll('.koltuk.secilen').length;
+        seciliKoltukSayisi = koltuklar.querySelectorAll('.koltuk.secilen').length;
         let total = seciliKoltukSayisi * 80;
         document.getElementById('normalTutar').innerHTML = total.toString() + ",00 TL";
         toplam = Number(total);
@@ -94,12 +94,14 @@ function sat() {
     document.getElementById("sectiniz").innerHTML = "";
     document.getElementById("sat").style.visibility = "hidden";
     document.getElementById("normalTutar").innerHTML = "00,00 TL";
+
     alert(secilenKoltuklar + " koltuk numaralı" + tutar + "tutarındaki biletinizin/biletlerinizin ödemesi başarıyla gerçekleşmiştir!");
 
-    let secilenSayisi = document.getElementsByClassName("secilen").length;
-    for (let i = 0; i < secilenSayisi; i++) {
+    seciliKoltukSayisi = document.getElementsByClassName("secilen").length;
+    for (let i = 0; i < seciliKoltukSayisi; i++) {
         document.getElementsByClassName("secilen")[i].style.background = "rgb(207, 205, 205)";
     }
+
 }
 function detayToBilet() {
 
