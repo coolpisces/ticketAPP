@@ -101,6 +101,7 @@ function sat() {
     seciliKoltukSayisi = document.getElementsByClassName("secilen").length;
     for (let i = 0; i < seciliKoltukSayisi; i++) {
         document.getElementsByClassName("secilen")[i].style.background = "rgb(207, 205, 205)";
+        document.getElementsByClassName("secilen")[i].style.cursor = "not-allowed";
     }
 
     setTimeout("window.location = 'index.html'", 3000);
