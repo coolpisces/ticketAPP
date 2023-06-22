@@ -91,16 +91,19 @@ function sat() {
 
 
     let secilenKoltuklar = document.getElementById("sectiniz").textContent;
+
+
+    alert(secilenKoltuklar + " koltuk numaralı " + document.getElementById('normalTutar').textContent + " tutarındaki biletinizin/biletlerinizin ödemesi başarıyla gerçekleşmiştir! 3 saniye sonra Anasayfaya yönlendirileceksiniz...");
     document.getElementById("sectiniz").innerHTML = "";
     document.getElementById("sat").style.visibility = "hidden";
     document.getElementById("normalTutar").innerHTML = "00,00 TL";
-
-    alert(secilenKoltuklar + " koltuk numaralı" + tutar + "tutarındaki biletinizin/biletlerinizin ödemesi başarıyla gerçekleşmiştir!");
 
     seciliKoltukSayisi = document.getElementsByClassName("secilen").length;
     for (let i = 0; i < seciliKoltukSayisi; i++) {
         document.getElementsByClassName("secilen")[i].style.background = "rgb(207, 205, 205)";
     }
+
+    setTimeout("window.location = 'index.html'", 3000);
 
 }
 function detayToBilet() {
@@ -108,3 +111,4 @@ function detayToBilet() {
     filmDetay.style.display = "none";
     bilet.style.display = "flex";
 }
+
