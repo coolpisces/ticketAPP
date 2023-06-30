@@ -136,12 +136,14 @@ function secimiOnayla() {
     if (document.getElementsByClassName('secilen').length != 0) {
         document.getElementById("sectiniz").innerHTML = "";
         let sayi = document.getElementsByClassName('secilen').length;
+
         for (let k = 0; k < sayi; k++) {
             document.getElementById("sectiniz").innerHTML += document.getElementsByClassName('secilen')[k].textContent + " -";
         }
         document.getElementById("sat").style.visibility = "visible";
     } else {
         document.getElementById("onayButonu").classList.add("disabled");
+        document.getElementById("sat").style.visibility = "hidden";
     }
 
 }
