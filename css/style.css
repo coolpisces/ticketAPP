@@ -103,3 +103,7 @@ a {
     margin-top: 200px;
     background-color: #f8e71c;
 }
+
+.detayTab {
+    display: none;
+}

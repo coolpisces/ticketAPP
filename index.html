@@ -38,7 +38,7 @@
                     </li>
                     <li class="nav-item ms-5">
                         <a class="btn bg-white shadow active d-flex flex-column align-items-center" aria-current="page"
-                            href="sinema.html">
+                            href="index.html">
                             <img src="images/cinema.png" class="img-fluid" width="35px" alt="">
                             <span>Sinema</span>
                         </a>
@@ -99,7 +99,7 @@
                             <img id="afis1" src="images/cinema-film/adalet.jpg" class="card-img-top" alt="adalet">
                             <div class="card-body">
                                 <h5 class="card-title">Adalet</h5>
-                                <p class="card-text"></p>
+                                <p class="card-text d-none">1</p>
                             </div>
                         </div>
                     </div>
@@ -108,7 +108,7 @@
                             <img id="afis2" src="images/cinema-film/fleabag.jpg" class="card-img-top" alt="fleabag">
                             <div class="card-body">
                                 <h5 class="card-title">Fleabag</h5>
-                                <p class="card-text"></p>
+                                <p class="card-text d-none">2</p>
                             </div>
                         </div>
                     </div>
@@ -117,7 +117,7 @@
                             <img id="afis3" src="images/cinema-film/joyland.jpg" class="card-img-top" alt="joyland">
                             <div class="card-body">
                                 <h5 class="card-title">Joyland</h5>
-                                <p class="card-text"></p>
+                                <p class="card-text d-none">3</p>
                             </div>
                         </div>
                     </div>
@@ -126,7 +126,7 @@
                             <img id="afis4" src="images/cinema-film/kerr.jpg" class="card-img-top" alt="kerr">
                             <div class="card-body">
                                 <h5 class="card-title">Kerr</h5>
-                                <p class="card-text"></p>
+                                <p class="card-text d-none">4</p>
                             </div>
                         </div>
                     </div>
@@ -135,7 +135,7 @@
                             <img id="afis5" src="images/cinema-film/obsesyon.jpg" class="card-img-top" alt="obsesyon">
                             <div class="card-body">
                                 <h5 class="card-title">Obsesyon</h5>
-                                <p class="card-text"></p>
+                                <p class="card-text d-none">5</p>
                             </div>
                         </div>
                     </div>
@@ -145,7 +145,7 @@
                                 alt="ren-altini">
                             <div class="card-body">
                                 <h5 class="card-title">Ren Altını</h5>
-                                <p class="card-text"></p>
+                                <p class="card-text d-none">6</p>
                             </div>
                         </div>
                     </div>
@@ -154,7 +154,7 @@
                             <img id="afis7" src="images/cinema-film/suzume.jpg" class="card-img-top" alt="suzume">
                             <div class="card-body">
                                 <h5 class="card-title">Suzume</h5>
-                                <p class="card-text"></p>
+                                <p class="card-text d-none">7</p>
                             </div>
                         </div>
                     </div>
@@ -163,7 +163,7 @@
                             <img id="afis8" src="images/cinema-film/the-flash.jpg" class="card-img-top" alt="the flash">
                             <div class="card-body">
                                 <h5 class="card-title">The Flash</h5>
-                                <p class="card-text"></p>
+                                <p class="card-text d-none">8</p>
                             </div>
                         </div>
                     </div>
@@ -187,9 +187,11 @@
                                     </span>
                                     <span id="oyuncular" class="d-inline ">
                                         <strong class="fw-bolder fs-5 me-2">Oyuncular:</strong>
-                                        <a href="#" class="link-underline-primary me-2 ">Ben Affleck</a>
-                                        <a href="#" class="link-underline-primary me-2">Ezra Miller</a>
-                                        <a href="#" class="link-underline-primary">Sasha Calle</a>
+                                        <span>
+                                            <a href="#" class="link-underline-primary me-2 ">Ben Affleck</a>
+                                            <a href="#" class="link-underline-primary me-2">Ezra Miller</a>
+                                            <a href="#" class="link-underline-primary">Sasha Calle</a>
+                                        </span>
                                     </span>
                                     <br>
                                     <span class="d-flex align-items-start mt-3">
@@ -214,62 +216,54 @@
                     </div>
 
                 </div>
-                <div class="detayTab">
+                <div id="Adalet" class="detayTab">
                     <div class="container">
                         <div class="row">
                             <div class="col ms-5 mt-4 bg-white">
                                 <nav>
-                                    <div class="nav nav-tabs bg-white" id="nav-tab" role="tablist">
-                                        <button class="nav-link active text-dark" id="nav-home-tab" data-bs-toggle="tab"
-                                            data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                                    <div class="nav nav-tabs bg-white" id="nav-tab1" role="tablist">
+                                        <button class="nav-link active text-dark" id="nav-aciklama1-tab"
+                                            data-bs-toggle="tab" data-bs-target="#nav-aciklama1" type="button"
+                                            role="tab" aria-controls="nav-aciklama"
                                             aria-selected="true">Açıklama</button>
-                                        <button class="nav-link text-dark" id="nav-profile-tab" data-bs-toggle="tab"
-                                            data-bs-target="#nav-profile" type="button" role="tab"
-                                            aria-controls="nav-profile" aria-selected="false">Filmin Kadrosu</button>
-                                        <button class="nav-link text-dark" id="nav-contact-tab" data-bs-toggle="tab"
-                                            data-bs-target="#nav-contact" type="button" role="tab"
-                                            aria-controls="nav-contact" aria-selected="false"><i
+                                        <button class="nav-link text-dark" id="nav-filmKadro-tab1" data-bs-toggle="tab"
+                                            data-bs-target="#nav-filmKadro1" type="button" role="tab"
+                                            aria-controls="nav-filmKadro" aria-selected="false">Filmin Kadrosu</button>
+                                        <button class="nav-link text-dark" id="nav-fragman-tab1" data-bs-toggle="tab"
+                                            data-bs-target="#nav-fragman1" type="button" role="tab"
+                                            aria-controls="nav-fragman" aria-selected="false"><i
                                                 class="bi bi-film me-2"></i>Fragman</button>
-                                        <button class="nav-link text-dark" id="nav-disabled-tab" data-bs-toggle="tab"
-                                            data-bs-target="#nav-disabled" type="button" role="tab"
-                                            aria-controls="nav-disabled" aria-selected="false">Etkinlik
+                                        <button class="nav-link text-dark" id="nav-etkinlikKurallari-tab1"
+                                            data-bs-toggle="tab" data-bs-target="#nav-etkinlikKurallari1" type="button"
+                                            role="tab" aria-controls="nav-etkinlikKurallari"
+                                            aria-selected="false">Etkinlik
                                             Kuralları</button>
                                     </div>
                                 </nav>
                                 <div class="tab-content bg-white" id="nav-tabContent">
-                                    <div class="tab-pane fade show active m-4" id="nav-home" role="tabpanel"
-                                        aria-labelledby="nav-home-tab" tabindex="0">
+                                    <div class="tab-pane fade show active m-4" id="nav-aciklama1" role="tabpanel"
+                                        aria-labelledby="nav-aciklama-tab" tabindex="0">
                                         <p>
-                                            The Flash, annesinin ölümünü engellemek için gücünü kullanarak zamanda
-                                            geriye giden Barry Allen'ın, zamanın lineer
-                                            akışında istenmeyen sonuçlara yol açmasını konu alıyor.
-                                        </p>
-                                        <p>
-                                            Barry, geçmişteki olayları değiştirmek amacıyla zamanda yolculuk yapmak için
-                                            süper güçlerini kullandığında The Flash’te
-                                            dünyalar çarpışır. Ancak ailesini kurtarma girişimi istemeden geleceği
-                                            değiştirdiğinde Barry, General Zod'un yok etme
-                                            tehdidiyle geri döndüğü ve sığınacak süper kahramanların olmadığı bir
-                                            gerçeklikte hapsolur. Hapsedilmiş bir Kripton'luyu
-                                            kurtarmak için, her ne kadar aradığı kişi olmasa da alışılmışın dışında olan
-                                            bu çok farklı Batman'i emeklilikten
-                                            vazgeçmeye ikna etmesi gerekmektedir… Nihayetinde, içinde bulunduğu dünyayı
-                                            kurtarmak ve bildiği geleceğe dönmek için
-                                            Barry'nin tek umudu hayatı için yarışmaktır. Ancak yaptığı tüm
-                                            fedakârlıkları evrenin başa dönmesi için yeterli olacak
-                                            mıdır?
+                                            Sınır ötesi bir operasyonda kardeşi gibi gördüğü arkadaşını şehit veren
+                                            Emir, yaşadığı travma sebebiyle hizmet ettiği
+                                            özel harekat biriminden ayrılarak gözlerden uzak bir hayatı tercih etmiştir.
+                                            Fakat hayatın onun için daha farklı
+                                            planları vardır. Yeni hayatının bir parçası haline gelen dostlarının vahşice
+                                            öldürülmesi, Emir’in geride bıraktığı
+                                            karanlık geçmişini tekrar gün yüzüne çıkarır ve kendi adaletini sağlamak
+                                            için mafya ile amansız bir mücadelenin içine
+                                            girer.
                                         </p>
                                     </div>
-                                    <div class="tab-pane fade" id="nav-profile" role="tabpanel"
-                                        aria-labelledby="nav-profile-tab" tabindex="0">
+                                    <div class="tab-pane fade" id="nav-filmKadro1" role="tabpanel"
+                                        aria-labelledby="nav-filmKadro-tab" tabindex="0">
                                         <div class="row ">
                                             <div class="col-1 d-flex justify-content-center flex-column text-center">
                                                 <p class="fw-bolder fs-5 mt-2">Yönetmen</p>
                                                 <figure class="figure">
-                                                    <img src="images/andy-muschietti-201791313533.jpg"
-                                                        class="figure-img img-fluid rounded-circle"
-                                                        alt="Andy Muschietti">
-                                                    <figcaption class="figure-caption">Andy Muschietti
+                                                    <img src="images/ozgur-bakar-201664113326.jpg"
+                                                        class="figure-img img-fluid rounded-circle" alt="Özgür Bakar">
+                                                    <figcaption class="figure-caption">Özgür Bakar
                                                     </figcaption>
                                                 </figure>
                                             </div>
@@ -279,40 +273,41 @@
                                                 <div
                                                     class="col-4 d-flex justify-content-start align-items-center text-center">
                                                     <figure class="figure mx-4">
-                                                        <img src="images/Ben-Affleck.jpg"
+                                                        <img src="images/ufuk-ozkan.jpg"
                                                             class="figure-img img-fluid rounded-circle"
-                                                            alt="Ben Affleck">
-                                                        <figcaption class="figure-caption">Ben Affleck
+                                                            alt="Ufuk Özkan">
+                                                        <figcaption class="figure-caption">Ufuk Özkan
                                                         </figcaption>
                                                     </figure>
                                                     <figure class="figure mx-4">
-                                                        <img src="images/ezramiller06122023-06-d2a4f114334841e98f787055a4375650.jpg"
+                                                        <img src="images/cagan-atakan-arslan.jpeg"
                                                             class="figure-img img-fluid rounded-circle"
-                                                            alt="Ezra Miller">
-                                                        <figcaption class="figure-caption">Ezra Miller
+                                                            alt="Çağan Atakan Arslan">
+                                                        <figcaption class="figure-caption">Çağan Arslan
                                                         </figcaption>
                                                     </figure>
-                                                    <figure class="figure">
-                                                        <img src="images/sasha-calle-1.png"
+                                                    <figure class="figure mx-4">
+                                                        <img src="images/eslem-akar.jpg"
                                                             class="figure-img img-fluid rounded-circle"
-                                                            alt="Sasha Calle">
-                                                        <figcaption class="figure-caption">Sasha Calle
+                                                            alt="Eslem Akar">
+                                                        <figcaption class="figure-caption">Eslem Akar
                                                         </figcaption>
                                                     </figure>
+
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="nav-contact" role="tabpanel"
-                                        aria-labelledby="nav-contact-tab" tabindex="0">
+                                    <div class="tab-pane fade" id="nav-fragman1" role="tabpanel"
+                                        aria-labelledby="nav-fragman-tab" tabindex="0">
                                         <iframe width="1230" height="600"
-                                            src="https://www.youtube.com/embed/dOsWBTMwWRI"
-                                            title="The Flash Türkçe Altyazılı Fragman | Biletinial" frameborder="0"
+                                            src="https://www.youtube.com/embed/LwdQV4BElXI"
+                                            title="Adalet Fragman | Biletinial" frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             allowfullscreen></iframe>
                                     </div>
-                                    <div class="tab-pane fade" id="nav-disabled" role="tabpanel"
-                                        aria-labelledby="nav-disabled-tab" tabindex="0">
+                                    <div class="tab-pane fade" id="nav-etkinlikKurallari1" role="tabpanel"
+                                        aria-labelledby="nav-etkinlikKurallari-tab" tabindex="0">
                                         <ul class="list-group">
                                             <li class="list-group-item">• Gününde ve saatinde kullanılmayan biletler
                                                 geçersiz olup, bilet bedeli ve
@@ -356,6 +351,954 @@
                         </div>
                     </div>
                 </div>
+                <div id="Fleabag" class="detayTab">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col ms-5 mt-4 bg-white">
+                                <nav>
+                                    <div class="nav nav-tabs bg-white" id="nav-tab2" role="tablist">
+                                        <button class="nav-link active text-dark" id="nav-aciklama-tab2"
+                                            data-bs-toggle="tab" data-bs-target="#nav-aciklama2" type="button"
+                                            role="tab" aria-controls="nav-aciklama"
+                                            aria-selected="true">Açıklama</button>
+                                        <button class="nav-link text-dark" id="nav-filmKadro-tab2" data-bs-toggle="tab"
+                                            data-bs-target="#nav-filmKadro2" type="button" role="tab"
+                                            aria-controls="nav-filmKadro" aria-selected="false">Filmin Kadrosu</button>
+                                        <button class="nav-link text-dark" id="nav-fragman-tab2" data-bs-toggle="tab"
+                                            data-bs-target="#nav-fragman2" type="button" role="tab"
+                                            aria-controls="nav-fragman" aria-selected="false"><i
+                                                class="bi bi-film me-2"></i>Fragman</button>
+                                        <button class="nav-link text-dark" id="nav-etkinlikKurallari-tab2"
+                                            data-bs-toggle="tab" data-bs-target="#nav-etkinlikKurallari2" type="button"
+                                            role="tab" aria-controls="nav-etkinlikKurallari"
+                                            aria-selected="false">Etkinlik
+                                            Kuralları</button>
+                                    </div>
+                                </nav>
+                                <div class="tab-content bg-white" id="nav-tabContent">
+                                    <div class="tab-pane fade show active m-4" id="nav-aciklama2" role="tabpanel"
+                                        aria-labelledby="nav-aciklama-tab" tabindex="0">
+                                        <p>BBC’nin hit TV dizisi Fleabag’e ilham veren Phoebe Waller-Bridge’in yazıp
+                                            canlandırdığı ödüllü oyun Fleabag 2019’da
+                                            Londra West End’de sahnelenmesinin ardından National Theatre Live ile beyaz
+                                            perdeye taşınıyor. Waller-Bridge’in tek
+                                            kişilik gösterisi Fleabag, kendine özgü şekilde yaşayan bir kadının iç
+                                            dünyasına bir bakış sunuyor. Fleabag seks
+                                            takıntılı, filtresiz ve bencil görünebilir, ancak bu buzdağının sadece
+                                            görünen kısmını oluşturuyor. Aile ve arkadaşlık
+                                            ilişkilerinde yaşadığı sıkıntıların yanı sıra işlettiği kafeyi ayakta
+                                            tutmaya çalışan Fleabag, bir anda kendini
+                                            kaybedecek hiçbir şeyi kalmamış olarak bulacaktır.
+                                        </p>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-filmKadro2" role="tabpanel"
+                                        aria-labelledby="nav-filmKadro-tab" tabindex="0">
+                                        <div class="row ">
+                                            <div class="col-1 d-flex justify-content-center flex-column text-center">
+                                                <p class="fw-bolder fs-5 mt-2">Yönetmen</p>
+                                                <figure class="figure">
+                                                    <img src="images/vicky-jones.jpeg"
+                                                        class="figure-img img-fluid rounded-circle" alt="Vicky Jones">
+                                                    <figcaption class="figure-caption">Vicky Jones
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                            <div
+                                                class="col-10 d-flex justify-content-center flex-column align-items-start">
+                                                <p class="fw-bolder fs-5 ms-4 mt-2">Kadro</p>
+                                                <div
+                                                    class="col-2 d-flex justify-content-start align-items-center text-center">
+                                                    <figure class="figure mx-4">
+                                                        <img src="images/Phoebe-Waller-Bridge.jpeg"
+                                                            class="figure-img img-fluid rounded-circle"
+                                                            alt="Phoebe Bridge">
+                                                        <figcaption class="figure-caption">Phoebe Bridge
+                                                        </figcaption>
+                                                    </figure>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-fragman2" role="tabpanel"
+                                        aria-labelledby="nav-fragman-tab" tabindex="0">
+                                        Fragman Yok!
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-etkinlikKurallari2" role="tabpanel"
+                                        aria-labelledby="nav-etkinlikKurallari-tab" tabindex="0">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">• Gününde ve saatinde kullanılmayan biletler
+                                                geçersiz olup, bilet bedeli ve
+                                                hizmet bedeli iadesi ve/veya değişiklik
+                                                yapılması mümkün değildir. Gün ve saatinde kullanılmayan biletlerin
+                                                iadesi için
+                                                Biletinial’dan talepte bulunulamaz.</li>
+                                            <li class="list-group-item">• Biletiniz mücbir sebep ya da etkinliğin iptali
+                                                haricinde herhangi bir sebeple
+                                                kullanılamayacak ise, en geç etkinlik
+                                                saatinden 1 saat önceye kadar, Biletinial ile irtibata geçmenizi rica
+                                                ederiz,
+                                                aksi takdirde biletinizin iptal işlemi
+                                                gerçekleştirilememektedir.</li>
+                                            <li class="list-group-item">• Organizasyon sahibi kurum ve/veya kuruluşlar
+                                                konser verilecek alanlarda
+                                                ve/veya konser salonlarında oturum düzeni ve
+                                                planında uygun gördüğü durumlarda yer değişikliği yapma hakkına
+                                                sahiptir.</li>
+                                            <li class="list-group-item">• Kullanıcı Biletinial üzerinden satın almış
+                                                olduğu biletler için etkinlik için
+                                                geçerli olan yaş sınırı kurallarına
+                                                uyduğunu kabul eder. Yaş sınırları için satın alınan biletin etkinlik
+                                                mekanında
+                                                kimlik ibrazı zorunlu olacaktır.</li>
+                                            <li class="list-group-item">• Etkinliğe ait indirimli bilet tanımı olması ve
+                                                indirimli bilet seçeneği ile
+                                                bilet satın alınması durumunda Kullanıcı
+                                                bu indirimli bilete tabi olduğu kabul ve tahaahüt eder. İndirimli
+                                                biletler için
+                                                satın alınan biletin etkinlik mekanında
+                                                kimlik ibrazı zorunlu olacaktır.</li>
+                                            <li class="list-group-item">• Etkinlik saatine geç kalınması durumunda
+                                                Biletinial kullanıcının etkinlik
+                                                mekanına alınması konusunda hiçbir şekilde
+                                                sorumlu değildir.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="Joyland" class="detayTab">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col ms-5 mt-4 bg-white">
+                                <nav>
+                                    <div class="nav nav-tabs bg-white" id="nav-tab" role="tablist">
+                                        <button class="nav-link active text-dark" id="nav-aciklama-tab3"
+                                            data-bs-toggle="tab" data-bs-target="#nav-aciklama3" type="button"
+                                            role="tab" aria-controls="nav-aciklama"
+                                            aria-selected="true">Açıklama</button>
+                                        <button class="nav-link text-dark" id="nav-filmKadro-tab3" data-bs-toggle="tab"
+                                            data-bs-target="#nav-filmKadro3" type="button" role="tab"
+                                            aria-controls="nav-filmKadro" aria-selected="false">Filmin Kadrosu</button>
+                                        <button class="nav-link text-dark" id="nav-fragman-tab3" data-bs-toggle="tab"
+                                            data-bs-target="#nav-fragman3" type="button" role="tab"
+                                            aria-controls="nav-fragman" aria-selected="false"><i
+                                                class="bi bi-film me-2"></i>Fragman</button>
+                                        <button class="nav-link text-dark" id="nav-etkinlikKurallari-tab3"
+                                            data-bs-toggle="tab" data-bs-target="#nav-etkinlikKurallari3" type="button"
+                                            role="tab" aria-controls="nav-etkinlikKurallari"
+                                            aria-selected="false">Etkinlik
+                                            Kuralları</button>
+                                    </div>
+                                </nav>
+                                <div class="tab-content bg-white" id="nav-tabContent">
+                                    <div class="tab-pane fade show active m-4" id="nav-aciklama3" role="tabpanel"
+                                        aria-labelledby="nav-aciklama-tab" tabindex="0">
+                                        <p>
+                                            Otoriter babalarının sözünden çıkmayan Rana ailesi, soylarını sürdürecek
+                                            erkek çocuklarının varlığıyla gurur
+                                            duymaktadır. Fakat ailenin geleceğe dair planları ve hem çevreye hem de
+                                            kendilerine karşı duruşları, beklenti ve
+                                            zorunluluklarını değiştirecek bir şey olur: Küçük oğulları Haydar gizlice
+                                            bir erotik kabarede iş bulur, üstüne üstlük
+                                            arkasında dans ettiği trans kadın şarkıcıya âşık olur. Joyland, neşeli anlar
+                                            kadar melankoliyle yüklü, duygusal bir
+                                            film. Saim Sadiq’in yönettiği bu ilk film, Cannes Film Festivali’nde
+                                            prömiyerini yapan ilk Pakistan filmi, Pakistan’ın
+                                            da Oscar adayı oldu.
+                                        </p>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-filmKadro3" role="tabpanel"
+                                        aria-labelledby="nav-filmKadro-tab" tabindex="0">
+                                        <div class="row ">
+                                            <div class="col-1 d-flex justify-content-center flex-column text-center">
+                                                <p class="fw-bolder fs-5 mt-2">Yönetmen</p>
+                                                <figure class="figure">
+                                                    <img src="images/saim-sadiq.jpeg"
+                                                        class="figure-img img-fluid rounded-circle" alt="Saim Sadiq">
+                                                    <figcaption class="figure-caption">Saim Sadiq
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                            <div
+                                                class="col-10 d-flex justify-content-center flex-column align-items-start">
+                                                <p class="fw-bolder fs-5 ms-4 mt-2">Kadro</p>
+                                                <div
+                                                    class="col-4 d-flex justify-content-start align-items-center text-center">
+                                                    <figure class="figure mx-4">
+                                                        <img src="images/Ali-Junejos-picture.jpg"
+                                                            class="figure-img img-fluid rounded-circle"
+                                                            alt="Ali Junejo">
+                                                        <figcaption class="figure-caption">Ali Junejo
+                                                        </figcaption>
+                                                    </figure>
+                                                    <figure class="figure mx-4">
+                                                        <img src="images/rasti-farooq.jpeg"
+                                                            class="figure-img img-fluid rounded-circle"
+                                                            alt="Rasti Farooq">
+                                                        <figcaption class="figure-caption">Rasti Farooq
+                                                        </figcaption>
+                                                    </figure>
+                                                    <figure class="figure">
+                                                        <img src="images/alina-khan.jpeg"
+                                                            class="figure-img img-fluid rounded-circle"
+                                                            alt="Alina Khan">
+                                                        <figcaption class="figure-caption">Alina Khan
+                                                        </figcaption>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-fragman3" role="tabpanel"
+                                        aria-labelledby="nav-fragman-tab" tabindex="0">
+                                        <iframe width="1230" height="600"
+                                            src="https://www.youtube.com/embed/-E4Ddtkd31E"
+                                            title="Joyland Türkçe Altyazılı Fragman | Biletinial" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-etkinlikKurallari3" role="tabpanel"
+                                        aria-labelledby="nav-etkinlikKurallari-tab" tabindex="0">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">• Gününde ve saatinde kullanılmayan biletler
+                                                geçersiz olup, bilet bedeli ve
+                                                hizmet bedeli iadesi ve/veya değişiklik
+                                                yapılması mümkün değildir. Gün ve saatinde kullanılmayan biletlerin
+                                                iadesi için
+                                                Biletinial’dan talepte bulunulamaz.</li>
+                                            <li class="list-group-item">• Biletiniz mücbir sebep ya da etkinliğin iptali
+                                                haricinde herhangi bir sebeple
+                                                kullanılamayacak ise, en geç etkinlik
+                                                saatinden 1 saat önceye kadar, Biletinial ile irtibata geçmenizi rica
+                                                ederiz,
+                                                aksi takdirde biletinizin iptal işlemi
+                                                gerçekleştirilememektedir.</li>
+                                            <li class="list-group-item">• Organizasyon sahibi kurum ve/veya kuruluşlar
+                                                konser verilecek alanlarda
+                                                ve/veya konser salonlarında oturum düzeni ve
+                                                planında uygun gördüğü durumlarda yer değişikliği yapma hakkına
+                                                sahiptir.</li>
+                                            <li class="list-group-item">• Kullanıcı Biletinial üzerinden satın almış
+                                                olduğu biletler için etkinlik için
+                                                geçerli olan yaş sınırı kurallarına
+                                                uyduğunu kabul eder. Yaş sınırları için satın alınan biletin etkinlik
+                                                mekanında
+                                                kimlik ibrazı zorunlu olacaktır.</li>
+                                            <li class="list-group-item">• Etkinliğe ait indirimli bilet tanımı olması ve
+                                                indirimli bilet seçeneği ile
+                                                bilet satın alınması durumunda Kullanıcı
+                                                bu indirimli bilete tabi olduğu kabul ve tahaahüt eder. İndirimli
+                                                biletler için
+                                                satın alınan biletin etkinlik mekanında
+                                                kimlik ibrazı zorunlu olacaktır.</li>
+                                            <li class="list-group-item">• Etkinlik saatine geç kalınması durumunda
+                                                Biletinial kullanıcının etkinlik
+                                                mekanına alınması konusunda hiçbir şekilde
+                                                sorumlu değildir.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="Kerr" class="detayTab">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col ms-5 mt-4 bg-white">
+                                <nav>
+                                    <div class="nav nav-tabs bg-white" id="nav-tab" role="tablist">
+                                        <button class="nav-link active text-dark" id="nav-aciklama-tab4"
+                                            data-bs-toggle="tab" data-bs-target="#nav-aciklama4" type="button"
+                                            role="tab" aria-controls="nav-aciklama"
+                                            aria-selected="true">Açıklama</button>
+                                        <button class="nav-link text-dark" id="nav-filmKadro-tab4" data-bs-toggle="tab"
+                                            data-bs-target="#nav-filmKadro4" type="button" role="tab"
+                                            aria-controls="nav-filmKadro" aria-selected="false">Filmin Kadrosu</button>
+                                        <button class="nav-link text-dark" id="nav-fragman-tab4" data-bs-toggle="tab"
+                                            data-bs-target="#nav-fragman4" type="button" role="tab"
+                                            aria-controls="nav-fragman" aria-selected="false"><i
+                                                class="bi bi-film me-2"></i>Fragman</button>
+                                        <button class="nav-link text-dark" id="nav-etkinlikKurallari-tab4"
+                                            data-bs-toggle="tab" data-bs-target="#nav-etkinlikKurallari4" type="button"
+                                            role="tab" aria-controls="nav-etkinlikKurallari"
+                                            aria-selected="false">Etkinlik
+                                            Kuralları</button>
+                                    </div>
+                                </nav>
+                                <div class="tab-content bg-white" id="nav-tabContent">
+                                    <div class="tab-pane fade show active m-4" id="nav-aciklama4" role="tabpanel"
+                                        aria-labelledby="nav-aciklama-tab" tabindex="0">
+                                        <p>
+                                            Genç bir adam olan Can, babasının cenezesi için kasabaya geldiğinde
+                                            kendisini beklenmedik durumların içinde bulur. Bir
+                                            cinayete tanık olan Can, kendsini umursamayıp sakince olay yerinden ayrılan
+                                            katil ile ilgili bildiklerini polislere
+                                            anlatır. İfade vermesinin ardından polisler Can'ın kasabadan ayrılmasına
+                                            izin vermez. Kasabada zaman geçirdikçe
+                                            babasının tuhaf arkadaşlarıyla tanışmaya başlayan Can, bir gün ölen
+                                            babasının terzi dükkanında katille yeniden
+                                            karşılaşır. Büyük bir korkuya kapılan Can, bilinmeyen bir suçla itham
+                                            edildiğini öğrendiğinde artık kasabadan kaçmaya
+                                            karar verir. Ancak bu sırada ülkede sokağa çıkma yasağı ilan edilir.
+                                        </p>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-filmKadro4" role="tabpanel"
+                                        aria-labelledby="nav-filmKadro-tab" tabindex="0">
+                                        <div class="row ">
+                                            <div class="col-1 d-flex justify-content-center flex-column text-center">
+                                                <p class="fw-bolder fs-5 mt-2">Yönetmen</p>
+                                                <figure class="figure">
+                                                    <img src="images/tayfun-pirselimoglu.jpg"
+                                                        class="figure-img img-fluid rounded-circle"
+                                                        alt="Tayfun Pirselimoğlu">
+                                                    <figcaption class="figure-caption">Tayfun Pirselimoğlu
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                            <div
+                                                class="col-10 d-flex justify-content-center flex-column align-items-start">
+                                                <p class="fw-bolder fs-5 ms-4 mt-2">Kadro</p>
+                                                <div
+                                                    class="col-4 d-flex justify-content-start align-items-center text-center">
+                                                    <figure class="figure mx-4">
+                                                        <img src="images/erdem-senocak.jpg"
+                                                            class="figure-img img-fluid rounded-circle"
+                                                            alt="Erdem Şenocak">
+                                                        <figcaption class="figure-caption">Erdem Şenocak
+                                                        </figcaption>
+                                                    </figure>
+                                                    <figure class="figure mx-4">
+                                                        <img src="images/jale-arikan.jpg"
+                                                            class="figure-img img-fluid rounded-circle"
+                                                            alt="Jale Arıkan">
+                                                        <figcaption class="figure-caption">Jale Arıkan
+                                                        </figcaption>
+                                                    </figure>
+                                                    <figure class="figure">
+                                                        <img src="images/riza-akin.jpg"
+                                                            class="figure-img img-fluid rounded-circle" alt="Rıza Akın">
+                                                        <figcaption class="figure-caption">Rıza Akın
+                                                        </figcaption>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-fragman4" role="tabpanel"
+                                        aria-labelledby="nav-fragman-tab" tabindex="0">
+                                        <iframe width="1292" height="726"
+                                            src="https://www.youtube.com/embed/-t50hwN7Cg0"
+                                            title="KERR | fragman | 22 Nisan&#39;dan itibaren #BaşkaSinema&#39;da!"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-etkinlikKurallari4" role="tabpanel"
+                                        aria-labelledby="nav-etkinlikKurallari-tab" tabindex="0">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">• Gününde ve saatinde kullanılmayan biletler
+                                                geçersiz olup, bilet bedeli ve
+                                                hizmet bedeli iadesi ve/veya değişiklik
+                                                yapılması mümkün değildir. Gün ve saatinde kullanılmayan biletlerin
+                                                iadesi için
+                                                Biletinial’dan talepte bulunulamaz.</li>
+                                            <li class="list-group-item">• Biletiniz mücbir sebep ya da etkinliğin iptali
+                                                haricinde herhangi bir sebeple
+                                                kullanılamayacak ise, en geç etkinlik
+                                                saatinden 1 saat önceye kadar, Biletinial ile irtibata geçmenizi rica
+                                                ederiz,
+                                                aksi takdirde biletinizin iptal işlemi
+                                                gerçekleştirilememektedir.</li>
+                                            <li class="list-group-item">• Organizasyon sahibi kurum ve/veya kuruluşlar
+                                                konser verilecek alanlarda
+                                                ve/veya konser salonlarında oturum düzeni ve
+                                                planında uygun gördüğü durumlarda yer değişikliği yapma hakkına
+                                                sahiptir.</li>
+                                            <li class="list-group-item">• Kullanıcı Biletinial üzerinden satın almış
+                                                olduğu biletler için etkinlik için
+                                                geçerli olan yaş sınırı kurallarına
+                                                uyduğunu kabul eder. Yaş sınırları için satın alınan biletin etkinlik
+                                                mekanında
+                                                kimlik ibrazı zorunlu olacaktır.</li>
+                                            <li class="list-group-item">• Etkinliğe ait indirimli bilet tanımı olması ve
+                                                indirimli bilet seçeneği ile
+                                                bilet satın alınması durumunda Kullanıcı
+                                                bu indirimli bilete tabi olduğu kabul ve tahaahüt eder. İndirimli
+                                                biletler için
+                                                satın alınan biletin etkinlik mekanında
+                                                kimlik ibrazı zorunlu olacaktır.</li>
+                                            <li class="list-group-item">• Etkinlik saatine geç kalınması durumunda
+                                                Biletinial kullanıcının etkinlik
+                                                mekanına alınması konusunda hiçbir şekilde
+                                                sorumlu değildir.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="Obsesyon" class="detayTab">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col ms-5 mt-4 bg-white">
+                                <nav>
+                                    <div class="nav nav-tabs bg-white" id="nav-tab" role="tablist">
+                                        <button class="nav-link active text-dark" id="nav-aciklama-tab5"
+                                            data-bs-toggle="tab" data-bs-target="#nav-aciklama5" type="button"
+                                            role="tab" aria-controls="nav-aciklama"
+                                            aria-selected="true">Açıklama</button>
+                                        <button class="nav-link text-dark" id="nav-filmKadro-tab5" data-bs-toggle="tab"
+                                            data-bs-target="#nav-filmKadro5" type="button" role="tab"
+                                            aria-controls="nav-filmKadro" aria-selected="false">Filmin Kadrosu</button>
+                                        <button class="nav-link text-dark" id="nav-fragman-tab5" data-bs-toggle="tab"
+                                            data-bs-target="#nav-fragman5" type="button" role="tab"
+                                            aria-controls="nav-fragman" aria-selected="false"><i
+                                                class="bi bi-film me-2"></i>Fragman</button>
+                                        <button class="nav-link text-dark" id="nav-etkinlikKurallari-tab5"
+                                            data-bs-toggle="tab" data-bs-target="#nav-etkinlikKurallari5" type="button"
+                                            role="tab" aria-controls="nav-etkinlikKurallari"
+                                            aria-selected="false">Etkinlik
+                                            Kuralları</button>
+                                    </div>
+                                </nav>
+                                <div class="tab-content bg-white" id="nav-tabContent">
+                                    <div class="tab-pane fade show active m-4" id="nav-aciklama5" role="tabpanel"
+                                        aria-labelledby="nav-aciklama-tab" tabindex="0">
+                                        <p>
+                                            Obsesyon, sevdiği kadının kalbini kazanmaya çalışan obsesif bir adam
+                                            hikayesini konu ediyor. Çevresi tarafından sevilen,
+                                            başarılı bir iş insanı olan Mert, obsesif biridir. Düzen takıntılığı
+                                            nedeniyle kendisini zor durumların içerisinde bulan
+                                            Mert, gönlünü Beren adında genç bir kadına kaptırır. Mert, Beren’in kalbini
+                                            kazanmak için türlü planlar yapar. Ancak
+                                            Beren’in kimsenin tahmin edemeyeceği gizli sırları vardır.
+                                        </p>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-filmKadro5" role="tabpanel"
+                                        aria-labelledby="nav-filmKadro-tab" tabindex="0">
+                                        <div class="row ">
+                                            <div class="col-1 d-flex justify-content-center flex-column text-center">
+                                                <p class="fw-bolder fs-5 mt-2">Yönetmen</p>
+                                                <figure class="figure">
+                                                    <img src="images/eray-altay.jpg"
+                                                        class="figure-img img-fluid rounded-circle" alt="Eray Altay">
+                                                    <figcaption class="figure-caption">Eray Altay
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                            <div
+                                                class="col-10 d-flex justify-content-center flex-column align-items-start">
+                                                <p class="fw-bolder fs-5 ms-4 mt-2">Kadro</p>
+                                                <div
+                                                    class="col-4 d-flex justify-content-start align-items-center text-center">
+                                                    <figure class="figure mx-4">
+                                                        <img src="images/ekin-duymaz.jpg"
+                                                            class="figure-img img-fluid rounded-circle"
+                                                            alt="Ekin Duymaz">
+                                                        <figcaption class="figure-caption">Ekin Duymaz
+                                                        </figcaption>
+                                                    </figure>
+                                                    <figure class="figure mx-4">
+                                                        <img src="images/ege-kokenli.jpg"
+                                                            class="figure-img img-fluid rounded-circle"
+                                                            alt="Ege Kökenli">
+                                                        <figcaption class="figure-caption">Ege Kökenli
+                                                        </figcaption>
+                                                    </figure>
+                                                    <figure class="figure">
+                                                        <img src="images/burcu-karakaya.jpg"
+                                                            class="figure-img img-fluid rounded-circle"
+                                                            alt="Burcu Karakaya">
+                                                        <figcaption class="figure-caption">Burcu Karakaya
+                                                        </figcaption>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-fragman5" role="tabpanel"
+                                        aria-labelledby="nav-fragman-tab" tabindex="0">
+                                        <iframe width="1128" height="635"
+                                            src="https://www.youtube.com/embed/edfyMv7Fuhc" title="Obsesyon - Tanıtım"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-etkinlikKurallari5" role="tabpanel"
+                                        aria-labelledby="nav-etkinlikKurallari-tab" tabindex="0">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">• Gününde ve saatinde kullanılmayan biletler
+                                                geçersiz olup, bilet bedeli ve
+                                                hizmet bedeli iadesi ve/veya değişiklik
+                                                yapılması mümkün değildir. Gün ve saatinde kullanılmayan biletlerin
+                                                iadesi için
+                                                Biletinial’dan talepte bulunulamaz.</li>
+                                            <li class="list-group-item">• Biletiniz mücbir sebep ya da etkinliğin iptali
+                                                haricinde herhangi bir sebeple
+                                                kullanılamayacak ise, en geç etkinlik
+                                                saatinden 1 saat önceye kadar, Biletinial ile irtibata geçmenizi rica
+                                                ederiz,
+                                                aksi takdirde biletinizin iptal işlemi
+                                                gerçekleştirilememektedir.</li>
+                                            <li class="list-group-item">• Organizasyon sahibi kurum ve/veya kuruluşlar
+                                                konser verilecek alanlarda
+                                                ve/veya konser salonlarında oturum düzeni ve
+                                                planında uygun gördüğü durumlarda yer değişikliği yapma hakkına
+                                                sahiptir.</li>
+                                            <li class="list-group-item">• Kullanıcı Biletinial üzerinden satın almış
+                                                olduğu biletler için etkinlik için
+                                                geçerli olan yaş sınırı kurallarına
+                                                uyduğunu kabul eder. Yaş sınırları için satın alınan biletin etkinlik
+                                                mekanında
+                                                kimlik ibrazı zorunlu olacaktır.</li>
+                                            <li class="list-group-item">• Etkinliğe ait indirimli bilet tanımı olması ve
+                                                indirimli bilet seçeneği ile
+                                                bilet satın alınması durumunda Kullanıcı
+                                                bu indirimli bilete tabi olduğu kabul ve tahaahüt eder. İndirimli
+                                                biletler için
+                                                satın alınan biletin etkinlik mekanında
+                                                kimlik ibrazı zorunlu olacaktır.</li>
+                                            <li class="list-group-item">• Etkinlik saatine geç kalınması durumunda
+                                                Biletinial kullanıcının etkinlik
+                                                mekanına alınması konusunda hiçbir şekilde
+                                                sorumlu değildir.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="RenAltini" class="detayTab">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col ms-5 mt-4 bg-white">
+                                <nav>
+                                    <div class="nav nav-tabs bg-white" id="nav-tab" role="tablist">
+                                        <button class="nav-link active text-dark" id="nav-aciklama-tab6"
+                                            data-bs-toggle="tab" data-bs-target="#nav-aciklama6" type="button"
+                                            role="tab" aria-controls="nav-aciklama"
+                                            aria-selected="true">Açıklama</button>
+                                        <button class="nav-link text-dark" id="nav-filmKadro-tab6" data-bs-toggle="tab"
+                                            data-bs-target="#nav-filmKadro6" type="button" role="tab"
+                                            aria-controls="nav-filmKadro" aria-selected="false">Filmin Kadrosu</button>
+                                        <button class="nav-link text-dark" id="nav-fragman-tab6" data-bs-toggle="tab"
+                                            data-bs-target="#nav-fragman6" type="button" role="tab"
+                                            aria-controls="nav-fragman" aria-selected="false"><i
+                                                class="bi bi-film me-2"></i>Fragman</button>
+                                        <button class="nav-link text-dark" id="nav-etkinlikKurallari-tab6"
+                                            data-bs-toggle="tab" data-bs-target="#nav-etkinlikKurallari6" type="button"
+                                            role="tab" aria-controls="nav-etkinlikKurallari"
+                                            aria-selected="false">Etkinlik
+                                            Kuralları</button>
+                                    </div>
+                                </nav>
+                                <div class="tab-content bg-white" id="nav-tabContent">
+                                    <div class="tab-pane fade show active m-4" id="nav-aciklama6" role="tabpanel"
+                                        aria-labelledby="nav-aciklama-tab" tabindex="0">
+                                        <p>
+                                            Rheingold, Giwar Hajabi namı diğer Xatar’ın gettodan müzik listelerinin
+                                            zirvesine uzanan hayat yolculuğuna odaklanıyor.
+                                            1980'lerin ortalarında Irak'tan Almanya'ya geldikten sonra kendini en dipte
+                                            bulan Giwar, küçük bir suçludan zamanla
+                                            büyük bir büyük bir satıcıya dönüştü. Bir uyuşturucu madde sevkiyat
+                                            sırasında kaybolunda Giwar, kartele borçlu kalmamak
+                                            için birkaç arkadaşıyla ciddi sonuçları olacak ve sonunda kendisini Irak
+                                            hapishanesinin cehennemine götürecek bir altın
+                                            soygunu planlar.
+                                        </p>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-filmKadro6" role="tabpanel"
+                                        aria-labelledby="nav-filmKadro-tab" tabindex="0">
+                                        <div class="row ">
+                                            <div class="col-1 d-flex justify-content-center flex-column text-center">
+                                                <p class="fw-bolder fs-5 mt-2">Yönetmen</p>
+                                                <figure class="figure">
+                                                    <img src="images/fatih-akin.jpg"
+                                                        class="figure-img img-fluid rounded-circle" alt="Fatih Akın">
+                                                    <figcaption class="figure-caption">Fatih Akın
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                            <div
+                                                class="col-10 d-flex justify-content-center flex-column align-items-start">
+                                                <p class="fw-bolder fs-5 ms-4 mt-2">Kadro</p>
+                                                <div
+                                                    class="col-4 d-flex justify-content-start align-items-center text-center">
+                                                    <figure class="figure mx-4">
+                                                        <img src="images/emilio-sakraya.jpg"
+                                                            class="figure-img img-fluid rounded-circle"
+                                                            alt="Emilio Sakraya">
+                                                        <figcaption class="figure-caption">Emilio Sakraya
+                                                        </figcaption>
+                                                    </figure>
+                                                    <figure class="figure mx-4">
+                                                        <img src="images/mona-pirzad.jpg"
+                                                            class="figure-img img-fluid rounded-circle"
+                                                            alt="Mona Pirzad">
+                                                        <figcaption class="figure-caption">Mona Pirzad
+                                                        </figcaption>
+                                                    </figure>
+                                                    <figure class="figure">
+                                                        <img src="images/julia-goldberg.jpg"
+                                                            class="figure-img img-fluid rounded-circle"
+                                                            alt="Julia Goldberg">
+                                                        <figcaption class="figure-caption">Julia Goldberg
+                                                        </figcaption>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-fragman6" role="tabpanel"
+                                        aria-labelledby="nav-fragman-tab" tabindex="0">
+                                        <iframe width="1128" height="635"
+                                            src="https://www.youtube.com/embed/tvIMnC4ai5Y"
+                                            title="Ren Altını | Altyazılı Fragman" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-etkinlikKurallari6" role="tabpanel"
+                                        aria-labelledby="nav-etkinlikKurallari-tab" tabindex="0">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">• Gününde ve saatinde kullanılmayan biletler
+                                                geçersiz olup, bilet bedeli ve
+                                                hizmet bedeli iadesi ve/veya değişiklik
+                                                yapılması mümkün değildir. Gün ve saatinde kullanılmayan biletlerin
+                                                iadesi için
+                                                Biletinial’dan talepte bulunulamaz.</li>
+                                            <li class="list-group-item">• Biletiniz mücbir sebep ya da etkinliğin iptali
+                                                haricinde herhangi bir sebeple
+                                                kullanılamayacak ise, en geç etkinlik
+                                                saatinden 1 saat önceye kadar, Biletinial ile irtibata geçmenizi rica
+                                                ederiz,
+                                                aksi takdirde biletinizin iptal işlemi
+                                                gerçekleştirilememektedir.</li>
+                                            <li class="list-group-item">• Organizasyon sahibi kurum ve/veya kuruluşlar
+                                                konser verilecek alanlarda
+                                                ve/veya konser salonlarında oturum düzeni ve
+                                                planında uygun gördüğü durumlarda yer değişikliği yapma hakkına
+                                                sahiptir.</li>
+                                            <li class="list-group-item">• Kullanıcı Biletinial üzerinden satın almış
+                                                olduğu biletler için etkinlik için
+                                                geçerli olan yaş sınırı kurallarına
+                                                uyduğunu kabul eder. Yaş sınırları için satın alınan biletin etkinlik
+                                                mekanında
+                                                kimlik ibrazı zorunlu olacaktır.</li>
+                                            <li class="list-group-item">• Etkinliğe ait indirimli bilet tanımı olması ve
+                                                indirimli bilet seçeneği ile
+                                                bilet satın alınması durumunda Kullanıcı
+                                                bu indirimli bilete tabi olduğu kabul ve tahaahüt eder. İndirimli
+                                                biletler için
+                                                satın alınan biletin etkinlik mekanında
+                                                kimlik ibrazı zorunlu olacaktır.</li>
+                                            <li class="list-group-item">• Etkinlik saatine geç kalınması durumunda
+                                                Biletinial kullanıcının etkinlik
+                                                mekanına alınması konusunda hiçbir şekilde
+                                                sorumlu değildir.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="Suzume" class="detayTab">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col ms-5 mt-4 bg-white">
+                                <nav>
+                                    <div class="nav nav-tabs bg-white" id="nav-tab" role="tablist">
+                                        <button class="nav-link active text-dark" id="nav-aciklama-tab7"
+                                            data-bs-toggle="tab" data-bs-target="#nav-aciklama7" type="button"
+                                            role="tab" aria-controls="nav-aciklama"
+                                            aria-selected="true">Açıklama</button>
+                                        <button class="nav-link text-dark" id="nav-filmKadro-tab7" data-bs-toggle="tab"
+                                            data-bs-target="#nav-filmKadro7" type="button" role="tab"
+                                            aria-controls="nav-filmKadro" aria-selected="false">Filmin Kadrosu</button>
+                                        <button class="nav-link text-dark" id="nav-fragman-tab7" data-bs-toggle="tab"
+                                            data-bs-target="#nav-fragman7" type="button" role="tab"
+                                            aria-controls="nav-fragman" aria-selected="false"><i
+                                                class="bi bi-film me-2"></i>Fragman</button>
+                                        <button class="nav-link text-dark" id="nav-etkinlikKurallari-tab7"
+                                            data-bs-toggle="tab" data-bs-target="#nav-etkinlikKurallari7" type="button"
+                                            role="tab" aria-controls="nav-etkinlikKurallari"
+                                            aria-selected="false">Etkinlik
+                                            Kuralları</button>
+                                    </div>
+                                </nav>
+                                <div class="tab-content bg-white" id="nav-tabContent">
+                                    <div class="tab-pane fade show active m-4" id="nav-aciklama7" role="tabpanel"
+                                        aria-labelledby="nav-aciklama-tab" tabindex="0">
+                                        <p>
+                                            Film, bir felaketin ardından ortaya çıkarak daha büyük yıkıma yol açan
+                                            kapıları kapatmaya çalışan 17 yaşındaki
+                                            Suzume’nin olgunlaşma hikâyesini konu alıyor.
+
+                                            Gökyüzün kızıla döndüğü, yerin titremeye başladığı Japonya’da felaket
+                                            kapıdadır. Ülkesini kurtarma misyonunu kararlı bir
+                                            genç olan Suzume üstlenir. Bütün ülkeye kaos getiren gizemli kapıları
+                                            kapatmak, başkalarının göremediği doğaüstü güçleri
+                                            görebilen kahramanımızın görevidir. Böylece, bütün ülkenin kaderinin bağlı
+                                            olduğu tehlikeli bir yolculuğa çıkar.
+                                        </p>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-filmKadro7" role="tabpanel"
+                                        aria-labelledby="nav-filmKadro-tab" tabindex="0">
+                                        <div class="row ">
+                                            <div class="col-1 d-flex justify-content-center flex-column text-center">
+                                                <p class="fw-bolder fs-5 mt-2">Yönetmen</p>
+                                                <figure class="figure">
+                                                    <img src="images/makoto-shinkai.jpg"
+                                                        class="figure-img img-fluid rounded-circle"
+                                                        alt="Makoto Shinkai">
+                                                    <figcaption class="figure-caption">Makoto Shinkai
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                            <div
+                                                class="col-10 d-flex justify-content-center flex-column align-items-start">
+                                                <p class="fw-bolder fs-5 ms-4 mt-2">Kadro</p>
+                                                <div
+                                                    class="col-4 d-flex justify-content-start align-items-center text-center">
+                                                    <figure class="figure mx-4">
+                                                        <img src="images/nanoka-hara.jpg"
+                                                            class="figure-img img-fluid rounded-circle"
+                                                            alt="Nanoka Hara">
+                                                        <figcaption class="figure-caption">Nanoka Hara
+                                                        </figcaption>
+                                                    </figure>
+                                                    <figure class="figure mx-4">
+                                                        <img src="images/hokuto-matsumura.jpg"
+                                                            class="figure-img img-fluid rounded-circle"
+                                                            alt="Hokuto Matsumura">
+                                                        <figcaption class="figure-caption">Hokuto Matsumura
+                                                        </figcaption>
+                                                    </figure>
+                                                    <figure class="figure">
+                                                        <img src="images/eri-fukatsu.jpg"
+                                                            class="figure-img img-fluid rounded-circle"
+                                                            alt="Eri Fukatsu">
+                                                        <figcaption class="figure-caption">Eri Fukatsu
+                                                        </figcaption>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-fragman7" role="tabpanel"
+                                        aria-labelledby="nav-fragman-tab" tabindex="0">
+                                        <iframe width="1230" height="600"
+                                            src="https://www.youtube.com/embed/CctIhfbTEJk"
+                                            title="Suzume Türkçe Altyazılı Fragman  | Biletinial" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-etkinlikKurallari7" role="tabpanel"
+                                        aria-labelledby="nav-etkinlikKurallari-tab" tabindex="0">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">• Gününde ve saatinde kullanılmayan biletler
+                                                geçersiz olup, bilet bedeli ve
+                                                hizmet bedeli iadesi ve/veya değişiklik
+                                                yapılması mümkün değildir. Gün ve saatinde kullanılmayan biletlerin
+                                                iadesi için
+                                                Biletinial’dan talepte bulunulamaz.</li>
+                                            <li class="list-group-item">• Biletiniz mücbir sebep ya da etkinliğin iptali
+                                                haricinde herhangi bir sebeple
+                                                kullanılamayacak ise, en geç etkinlik
+                                                saatinden 1 saat önceye kadar, Biletinial ile irtibata geçmenizi rica
+                                                ederiz,
+                                                aksi takdirde biletinizin iptal işlemi
+                                                gerçekleştirilememektedir.</li>
+                                            <li class="list-group-item">• Organizasyon sahibi kurum ve/veya kuruluşlar
+                                                konser verilecek alanlarda
+                                                ve/veya konser salonlarında oturum düzeni ve
+                                                planında uygun gördüğü durumlarda yer değişikliği yapma hakkına
+                                                sahiptir.</li>
+                                            <li class="list-group-item">• Kullanıcı Biletinial üzerinden satın almış
+                                                olduğu biletler için etkinlik için
+                                                geçerli olan yaş sınırı kurallarına
+                                                uyduğunu kabul eder. Yaş sınırları için satın alınan biletin etkinlik
+                                                mekanında
+                                                kimlik ibrazı zorunlu olacaktır.</li>
+                                            <li class="list-group-item">• Etkinliğe ait indirimli bilet tanımı olması ve
+                                                indirimli bilet seçeneği ile
+                                                bilet satın alınması durumunda Kullanıcı
+                                                bu indirimli bilete tabi olduğu kabul ve tahaahüt eder. İndirimli
+                                                biletler için
+                                                satın alınan biletin etkinlik mekanında
+                                                kimlik ibrazı zorunlu olacaktır.</li>
+                                            <li class="list-group-item">• Etkinlik saatine geç kalınması durumunda
+                                                Biletinial kullanıcının etkinlik
+                                                mekanına alınması konusunda hiçbir şekilde
+                                                sorumlu değildir.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="TheFlash" class="detayTab">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col ms-5 mt-4 bg-white">
+                                <nav>
+                                    <div class="nav nav-tabs bg-white" id="nav-tab" role="tablist">
+                                        <button class="nav-link active text-dark" id="nav-aciklama-tab8"
+                                            data-bs-toggle="tab" data-bs-target="#nav-aciklama8" type="button"
+                                            role="tab" aria-controls="nav-aciklama"
+                                            aria-selected="true">Açıklama</button>
+                                        <button class="nav-link text-dark" id="nav-filmKadro-tab8" data-bs-toggle="tab"
+                                            data-bs-target="#nav-filmKadro8" type="button" role="tab"
+                                            aria-controls="nav-filmKadro" aria-selected="false">Filmin Kadrosu</button>
+                                        <button class="nav-link text-dark" id="nav-fragman-tab8" data-bs-toggle="tab"
+                                            data-bs-target="#nav-fragman8" type="button" role="tab"
+                                            aria-controls="nav-fragman" aria-selected="false"><i
+                                                class="bi bi-film me-2"></i>Fragman</button>
+                                        <button class="nav-link text-dark" id="nav-etkinlikKurallari-tab8"
+                                            data-bs-toggle="tab" data-bs-target="#nav-etkinlikKurallari8" type="button"
+                                            role="tab" aria-controls="nav-etkinlikKurallari"
+                                            aria-selected="false">Etkinlik
+                                            Kuralları</button>
+                                    </div>
+                                </nav>
+                                <div class="tab-content bg-white" id="nav-tabContent">
+                                    <div class="tab-pane fade show active m-4" id="nav-aciklama8" role="tabpanel"
+                                        aria-labelledby="nav-aciklama-tab" tabindex="0">
+                                        <p>
+                                            The Flash, annesinin ölümünü engellemek için gücünü kullanarak zamanda
+                                            geriye giden Barry Allen'ın, zamanın lineer
+                                            akışında istenmeyen sonuçlara yol açmasını konu alıyor.
+                                        </p>
+                                        <p>
+                                            Barry, geçmişteki olayları değiştirmek amacıyla zamanda yolculuk yapmak için
+                                            süper güçlerini kullandığında The Flash’te
+                                            dünyalar çarpışır. Ancak ailesini kurtarma girişimi istemeden geleceği
+                                            değiştirdiğinde Barry, General Zod'un yok etme
+                                            tehdidiyle geri döndüğü ve sığınacak süper kahramanların olmadığı bir
+                                            gerçeklikte hapsolur. Hapsedilmiş bir Kripton'luyu
+                                            kurtarmak için, her ne kadar aradığı kişi olmasa da alışılmışın dışında olan
+                                            bu çok farklı Batman'i emeklilikten
+                                            vazgeçmeye ikna etmesi gerekmektedir… Nihayetinde, içinde bulunduğu dünyayı
+                                            kurtarmak ve bildiği geleceğe dönmek için
+                                            Barry'nin tek umudu hayatı için yarışmaktır. Ancak yaptığı tüm
+                                            fedakârlıkları evrenin başa dönmesi için yeterli olacak
+                                            mıdır?
+                                        </p>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-filmKadro8" role="tabpanel"
+                                        aria-labelledby="nav-filmKadro-tab" tabindex="0">
+                                        <div class="row ">
+                                            <div class="col-1 d-flex justify-content-center flex-column text-center">
+                                                <p class="fw-bolder fs-5 mt-2">Yönetmen</p>
+                                                <figure class="figure">
+                                                    <img src="images/andy-muschietti-201791313533.jpg"
+                                                        class="figure-img img-fluid rounded-circle"
+                                                        alt="Andy Muschietti">
+                                                    <figcaption class="figure-caption">Andy Muschietti
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                            <div
+                                                class="col-10 d-flex justify-content-center flex-column align-items-start">
+                                                <p class="fw-bolder fs-5 ms-4 mt-2">Kadro</p>
+                                                <div
+                                                    class="col-4 d-flex justify-content-start align-items-center text-center">
+                                                    <figure class="figure mx-4">
+                                                        <img src="images/Ben-Affleck.jpg"
+                                                            class="figure-img img-fluid rounded-circle"
+                                                            alt="Ben Affleck">
+                                                        <figcaption class="figure-caption">Ben Affleck
+                                                        </figcaption>
+                                                    </figure>
+                                                    <figure class="figure mx-4">
+                                                        <img src="images/ezramiller06122023-06-d2a4f114334841e98f787055a4375650.jpg"
+                                                            class="figure-img img-fluid rounded-circle"
+                                                            alt="Ezra Miller">
+                                                        <figcaption class="figure-caption">Ezra Miller
+                                                        </figcaption>
+                                                    </figure>
+                                                    <figure class="figure">
+                                                        <img src="images/sasha-calle-1.png"
+                                                            class="figure-img img-fluid rounded-circle"
+                                                            alt="Sasha Calle">
+                                                        <figcaption class="figure-caption">Sasha Calle
+                                                        </figcaption>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-fragman8" role="tabpanel"
+                                        aria-labelledby="nav-fragman-tab" tabindex="0">
+                                        <iframe width="1230" height="600"
+                                            src="https://www.youtube.com/embed/dOsWBTMwWRI"
+                                            title="The Flash Türkçe Altyazılı Fragman | Biletinial" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-etkinlikKurallari8" role="tabpanel"
+                                        aria-labelledby="nav-etkinlikKurallari-tab" tabindex="0">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">• Gününde ve saatinde kullanılmayan biletler
+                                                geçersiz olup, bilet bedeli ve
+                                                hizmet bedeli iadesi ve/veya değişiklik
+                                                yapılması mümkün değildir. Gün ve saatinde kullanılmayan biletlerin
+                                                iadesi için
+                                                Biletinial’dan talepte bulunulamaz.</li>
+                                            <li class="list-group-item">• Biletiniz mücbir sebep ya da etkinliğin iptali
+                                                haricinde herhangi bir sebeple
+                                                kullanılamayacak ise, en geç etkinlik
+                                                saatinden 1 saat önceye kadar, Biletinial ile irtibata geçmenizi rica
+                                                ederiz,
+                                                aksi takdirde biletinizin iptal işlemi
+                                                gerçekleştirilememektedir.</li>
+                                            <li class="list-group-item">• Organizasyon sahibi kurum ve/veya kuruluşlar
+                                                konser verilecek alanlarda
+                                                ve/veya konser salonlarında oturum düzeni ve
+                                                planında uygun gördüğü durumlarda yer değişikliği yapma hakkına
+                                                sahiptir.</li>
+                                            <li class="list-group-item">• Kullanıcı Biletinial üzerinden satın almış
+                                                olduğu biletler için etkinlik için
+                                                geçerli olan yaş sınırı kurallarına
+                                                uyduğunu kabul eder. Yaş sınırları için satın alınan biletin etkinlik
+                                                mekanında
+                                                kimlik ibrazı zorunlu olacaktır.</li>
+                                            <li class="list-group-item">• Etkinliğe ait indirimli bilet tanımı olması ve
+                                                indirimli bilet seçeneği ile
+                                                bilet satın alınması durumunda Kullanıcı
+                                                bu indirimli bilete tabi olduğu kabul ve tahaahüt eder. İndirimli
+                                                biletler için
+                                                satın alınan biletin etkinlik mekanında
+                                                kimlik ibrazı zorunlu olacaktır.</li>
+                                            <li class="list-group-item">• Etkinlik saatine geç kalınması durumunda
+                                                Biletinial kullanıcının etkinlik
+                                                mekanına alınması konusunda hiçbir şekilde
+                                                sorumlu değildir.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
             </div>
             <div id="bilet" class="shadow rounded-4">
                 <div class="container shadow p-4 mt-1">
@@ -396,11 +1339,12 @@
                                             </span>
 
                                         </p>
-                                        <button class="btn btn-info d-flex justify-content-end"
+                                        <button id="onayButonu" class="btn btn-info d-flex justify-content-end"
                                             onclick="secimiOnayla();">Seçimi
                                             Onayla</button>
                                         <button id="sat" class="btn sat btn-success d-flex justify-content-end"
-                                            onclick="sat()">Satın
+                                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasTopUyari"
+                                            aria-controls="offcanvasTopUyari" aria-label="Search" onclick="sat()">Satın
                                             Al</button>
 
                                     </div>
@@ -635,6 +1579,8 @@
     </div>
     <!--Şehir Seç offcanvas end-->
 
+
+
     <!--Search top offcanvas start-->
     <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
         <div class="offcanvas-header">
@@ -643,6 +1589,32 @@
         </div>
         <div class="offcanvas-body">
             ...
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTopSecimiOnayla" aria-labelledby="offcanvasTopLabel"
+        data-bs-backdrop="static">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasTopLabelSecimiOnayla">UYARI</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p id="secimiOnayla"></p>
+            <button type="button" class="btn btn-danger text-white" data-bs-dismiss="offcanvas"
+                aria-label="SehirSec">Close</button>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTopUyari" aria-labelledby="offcanvasTopLabel"
+        data-bs-backdrop="static">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasTopLabelUyari">UYARI</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p id="uyari"></p>
+            <button type="button" class="btn btn-success text-white" data-bs-dismiss="offcanvas" aria-label="Yonlendir"
+                onclick="yonlendir()">Anasayfa</button>
         </div>
     </div>
     <!--Search top offcanvas end-->
