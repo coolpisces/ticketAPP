@@ -33,7 +33,7 @@
                     <li class="nav-item">
                         <button id="sehirButon" class="btn bg-white shadow me-5 pasif" type="button"
                             data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
-                            aria-controls="offcanvasScrolling">
+                            aria-controls="offcanvasScrolling" onpointerdown="sehirMenu()">
                             Bulunduğun Şehir</button>
                     </li>
                     <li class="nav-item ms-5">
@@ -95,7 +95,7 @@
             <div id="afis" class="col-6 m-auto">
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col">
-                        <div class="card h-100" onclick="sinemaSecim()">
+                        <div class="card h-100" onpointerdown="sinemaSecim()">
                             <img id="afis1" src="images/cinema-film/adalet.jpg" class="card-img-top" alt="adalet">
                             <div class="card-body">
                                 <h5 class="card-title">Adalet</h5>
@@ -104,7 +104,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card h-100" onclick="sinemaSecim()">
+                        <div class="card h-100" onpointerdown="sinemaSecim()">
                             <img id="afis2" src="images/cinema-film/fleabag.jpg" class="card-img-top" alt="fleabag">
                             <div class="card-body">
                                 <h5 class="card-title">Fleabag</h5>
@@ -113,7 +113,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card h-100" onclick="sinemaSecim()">
+                        <div class="card h-100" onpointerdown="sinemaSecim()">
                             <img id="afis3" src="images/cinema-film/joyland.jpg" class="card-img-top" alt="joyland">
                             <div class="card-body">
                                 <h5 class="card-title">Joyland</h5>
@@ -122,7 +122,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card h-100" onclick="sinemaSecim()">
+                        <div class="card h-100" onpointerdown="sinemaSecim()">
                             <img id="afis4" src="images/cinema-film/kerr.jpg" class="card-img-top" alt="kerr">
                             <div class="card-body">
                                 <h5 class="card-title">Kerr</h5>
@@ -131,7 +131,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card h-100" onclick="sinemaSecim()">
+                        <div class="card h-100" onpointerdown="sinemaSecim()">
                             <img id="afis5" src="images/cinema-film/obsesyon.jpg" class="card-img-top" alt="obsesyon">
                             <div class="card-body">
                                 <h5 class="card-title">Obsesyon</h5>
@@ -140,7 +140,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card h-100" onclick="sinemaSecim()">
+                        <div class="card h-100" onpointerdown="sinemaSecim()">
                             <img id="afis6" src="images/cinema-film/ren-altini.jpg" class="card-img-top"
                                 alt="ren-altini">
                             <div class="card-body">
@@ -150,7 +150,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card h-100" onclick="sinemaSecim()">
+                        <div class="card h-100" onpointerdown="sinemaSecim()">
                             <img id="afis7" src="images/cinema-film/suzume.jpg" class="card-img-top" alt="suzume">
                             <div class="card-body">
                                 <h5 class="card-title">Suzume</h5>
@@ -159,7 +159,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card h-100" onclick="sinemaSecim()">
+                        <div class="card h-100" onpointerdown="sinemaSecim()">
                             <img id="afis8" src="images/cinema-film/the-flash.jpg" class="card-img-top" alt="the flash">
                             <div class="card-body">
                                 <h5 class="card-title">The Flash</h5>
@@ -1340,7 +1340,7 @@
 
                                         </p>
                                         <button id="onayButonu" class="btn btn-info d-flex justify-content-end"
-                                            onclick="secimiOnayla();">Seçimi
+                                            onclick="secimiOnayla(); ">Seçimi
                                             Onayla</button>
                                         <button id="sat" class="btn sat btn-success d-flex justify-content-end"
                                             data-bs-toggle="offcanvas" data-bs-target="#offcanvasTopUyari"
