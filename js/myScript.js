@@ -10,11 +10,24 @@ function sehirMenu() {
     document.querySelector("#offcanvasScrolling").style.display = "flex";
 }
 
+const mainPopup = document.querySelector('.main-popup');
+const popupClose = document.querySelector('.popup-close');
+
 
 function sinemaSecim() {
     if (document.getElementById("sehirButon").classList.contains("pasif")) {
-        alert("Öncelikle bulunduğunuz şehri seçin!");
+
         document.getElementById("sehirButon").style.border = "3px solid red";
+        mainPopup.style.display = "block";
+
+        popupClose.addEventListener('click', () => {
+            mainPopup.style.display = 'none';
+        });
+
+        mainPopup.addEventListener('click', e => {
+            if (e.target.className === 'main-popup')
+                mainPopup.style.display = 'none';
+        })
     } else {
         document.getElementById("sinemaAdi").textContent = document.getElementById("sehirButon").textContent;
         const biletTitle = document.getElementById("bilet-title");
@@ -23,6 +36,7 @@ function sinemaSecim() {
         const menulinks = document.getElementsByClassName("card");
         Array.from(menulinks).forEach((menulink) => {
             menulink.addEventListener("click", () => {
+
                 document.getElementById("bilet-img").src = menulink.firstElementChild.getAttribute("src");
                 document.getElementById("bilet-img2").src = menulink.firstElementChild.getAttribute("src");
                 biletTitle.textContent = menulink.lastElementChild.children[0].textContent;
@@ -150,26 +164,40 @@ function sat() {
 
     let secilenKoltuklar = document.getElementById("sectiniz").textContent;
 
-    document.getElementById("uyari").innerHTML = secilenKoltuklar + " koltuk numaralı " + document.getElementById('normalTutar').textContent + " tutarındaki biletinizin/biletlerinizin ödemesi başarıyla gerçekleşmiştir!";
+    //document.getElementsByClassName("main-popup").classList.innerHTML = secilenKoltuklar + " koltuk numaralı " + document.getElementById('normalTutar').textContent + " tutarındaki biletinizin/biletlerinizin ödemesi başarıyla gerçekleşmiştir!";
+    document.querySelector('.popup-content').lastElementChild.textContent = secilenKoltuklar + " koltuk numaralı " + document.getElementById('normalTutar').textContent + " tutarındaki biletinizin/biletlerinizin ödemesi başarıyla gerçekleşmiştir!";
+    document.querySelector('.popup-content').firstElementChild.textContent = "Bilet Satış Onayı!";
+    mainPopup.style.display = "block";
+
+    popupClose.addEventListener('click', () => {
+        mainPopup.style.display = 'none';
+    });
+
+    mainPopup.addEventListener('click', e => {
+        if (e.target.className === 'main-popup')
+            mainPopup.style.display = 'none';
+    })
+
+
     document.getElementById("sectiniz").innerHTML = "";
     document.getElementById("sat").style.visibility = "hidden";
     document.getElementById("normalTutar").innerHTML = "00,00 TL";
 
+    const secilenKoltukDurum = document.querySelectorAll('.secilen');
+
+
     seciliKoltukSayisi = document.getElementsByClassName("secilen").length;
     for (let i = 0; i < seciliKoltukSayisi; i++) {
-        document.getElementsByClassName("secilen")[i].style.background = "rgb(207, 205, 205)";
-        document.getElementsByClassName("secilen")[i].style.cursor = "not-allowed";
+        secilenKoltukDurum[i].style.background = "rgb(207, 205, 205)";
+        secilenKoltukDurum[i].style.cursor = "not-allowed";
+        secilenKoltukDurum[i].classList.remove('secilen');
+        secilenKoltukDurum[i].classList.add('dolu');
     }
-
-
-
-
-
 }
 
-function yonlendir() {
-    setTimeout("window.location = 'index.html'", 300);
-}
+// function yonlendir() {
+//     setTimeout("window.location = 'index.html'", 300);
+// }
 function detayToBilet() {
 
     filmDetay.style.display = "none";

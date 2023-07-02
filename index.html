@@ -422,7 +422,11 @@
                                     </div>
                                     <div class="tab-pane fade" id="nav-fragman2" role="tabpanel"
                                         aria-labelledby="nav-fragman-tab" tabindex="0">
-                                        Fragman Yok!
+                                        <iframe width="1280" height="720"
+                                            src="https://www.youtube.com/embed/FhZHv2id6Sk"
+                                            title="Fleabag ( Season 1 ) - Trailer VO" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
                                     </div>
                                     <div class="tab-pane fade" id="nav-etkinlikKurallari2" role="tabpanel"
                                         aria-labelledby="nav-etkinlikKurallari-tab" tabindex="0">
@@ -1343,8 +1347,7 @@
                                             onclick="secimiOnayla(); ">Seçimi
                                             Onayla</button>
                                         <button id="sat" class="btn sat btn-success d-flex justify-content-end"
-                                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasTopUyari"
-                                            aria-controls="offcanvasTopUyari" aria-label="Search" onclick="sat()">Satın
+                                            onclick="sat()">Satın
                                             Al</button>
 
                                     </div>
@@ -1606,18 +1609,30 @@
     </div>
 
     <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTopUyari" aria-labelledby="offcanvasTopLabel"
-        data-bs-backdrop="static">
+        data-bs-backdrop="offcanvas">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasTopLabelUyari">UYARI</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
             <p id="uyari"></p>
-            <button type="button" class="btn btn-success text-white" data-bs-dismiss="offcanvas" aria-label="Yonlendir"
-                onclick="yonlendir()">Anasayfa</button>
+
         </div>
     </div>
     <!--Search top offcanvas end-->
+
+    <div class="main-popup">
+        <div class="popup">
+            <div class="popup-close btn btn-close">
+
+            </div>
+            <div class="popup-content">
+                <p class="h3 text-danger">Şehir Seçim Uyarısı!</p>
+                <p class="text-black-50">Öncelikle bulunduğunuz şehri seçin!</p>
+
+            </div>
+        </div>
+    </div>
     <script src="js/myScript.js"></script>
 </body>
 

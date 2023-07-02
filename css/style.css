@@ -107,3 +107,71 @@ a {
 .detayTab {
     display: none;
 }
+
+.main-popup {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+
+}
+
+.popup {
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    margin: auto;
+    margin-top: 300px;
+    padding: 30px;
+    background: white;
+    position: relative;
+    border-radius: 10px;
+}
+
+.popup a {
+    background: red;
+    color: white;
+    padding: 7px 11px;
+    text-decoration: none;
+}
+
+.popup-close {
+    position: absolute;
+    cursor: pointer;
+    top: 4px;
+    right: 7px;
+}
+
+.main-popup:hover {
+    animation: titre 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes titre {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
