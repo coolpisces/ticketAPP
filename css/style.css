@@ -116,7 +116,7 @@ a {
     width: 100%;
     height: 100%;
     display: none;
-
+    z-index: 999;
 }
 
 .popup {
@@ -131,18 +131,18 @@ a {
     border-radius: 10px;
 }
 
-.popup a {
-    background: red;
-    color: white;
-    padding: 7px 11px;
-    text-decoration: none;
-}
-
 .popup-close {
     position: absolute;
     cursor: pointer;
     top: 4px;
     right: 7px;
+}
+
+.popup:hover {
+    animation: titre 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
 }
 
 .main-popup:hover {
