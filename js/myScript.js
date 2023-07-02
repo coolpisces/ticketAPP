@@ -3,7 +3,6 @@ const sehirButon = document.getElementById("sehirButon");
 function sehirSec() {
     sehirButon.innerHTML = 'Seçili Şehir <br> <span class="fw-bold">' + sehir.value + '</span>';
     sehirButon.style.border = "none";
-
 }
 function sehirMenu() {
     document.querySelector("#offcanvasScrolling").style.display = "flex";
@@ -12,15 +11,20 @@ const mainPopup = document.querySelector('.main-popup');
 const popupClose = document.querySelector('.popup-close');
 function sinemaSecim() {
     if (sehirButon.classList.contains("pasif")) {
-        sehirButon.style.border = "3px solid red";
         mainPopup.style.display = "block";
         popupClose.addEventListener('click', () => {
             mainPopup.style.display = 'none';
+            sehirButon.setAttribute('style',
+                'border: 3px solid tomato;animation: titre 0.82s cubic-bezier(.36, .07, .19, .97) both;transform: translate3d(0, 0, 0); backface - visibility: hidden; perspective: 1000px;');
         });
         mainPopup.addEventListener('click', e => {
-            if (e.target.className === 'main-popup')
+            if (e.target.className === 'main-popup') {
                 mainPopup.style.display = 'none';
-        })
+                sehirButon.setAttribute('style',
+                    'border: 3px solid tomato;animation: titre 0.82s cubic-bezier(.36, .07, .19, .97) both;transform: translate3d(0, 0, 0); backface - visibility: hidden; perspective: 1000px;');
+            }
+        });
+
     } else {
         document.getElementById("sinemaAdi").textContent = sehirButon.textContent;
         const biletTitle = document.getElementById("bilet-title");
